@@ -20,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <div className="App" >
-        <Navbar user={this.state.user} setUser={this.setUser} />
+        {/* <Navbar user={this.state.user} setUser={this.setUser} /> */}
 
 
         <Route

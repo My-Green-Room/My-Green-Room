@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Form, Button, Alert } from 'react-bootstrap';
 import { signup } from '../services/auth';
 
 export default class Signup extends Component {
