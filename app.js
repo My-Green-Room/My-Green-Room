@@ -9,6 +9,11 @@ const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
 
+const session = require('express-session');
+const passport = require('passport');
+
+require('./configs/passport.js');
+
 
 mongoose
   .connect('mongodb://localhost/my-green-room', {useNewUrlParser: true})
