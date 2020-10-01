@@ -4,6 +4,8 @@ import './App.css';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import Navbar from './components/Navbar';
+import Room from './components/Room'
+import Home from './components/Home'
 
 class App extends Component {
 
@@ -20,7 +22,21 @@ class App extends Component {
   render() {
     return (
       <div className="App" >
-        {/* <Navbar user={this.state.user} setUser={this.setUser} /> */}
+        <Navbar user={this.state.user} setUser={this.setUser} />
+
+        <Route
+          exact
+          path='/'
+          render={props => <Home setUser={this.setUser} {...props} />}
+        />
+
+        <Route
+          exact
+          path='/room'
+          render={props => <Room setUser={this.setUser} {...props} />}
+        />
+
+
 
 
         <Route

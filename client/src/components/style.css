@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+h1 {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.nav-container {
+  font-family: 'Amatic SC', cursive;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.my-green-room {
+  font-family: 'Amatic SC', cursive;
+  color: green;
+  font-size: 56px;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.room-container {
+  display: flex;
+}
+
+.plant-container {
+  display: flex;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.login {
+  font-family: 'Amatic SC', cursive;
+  color: green;
+  font-size: 24px;
+}
+
+
