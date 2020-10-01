@@ -7,3 +7,19 @@ cloudinary.config({
   api_key: process.env.CLOUDINARY_KEY,
   api_secret: process.env.CLOUDINARY_SECRET,
 });
+
+var storage = cloudinaryStorage({
+  cloudinary,
+  folder: "grnroom",
+  allowedFormats: ["jpg", "png"],
+  filename: function (req, res, cb) {
+    cb(null, res.originalname);
+  },
+});
+
+const uploader = multer({ storage });
+
+module.exports = {
+  cloudinary,
+  uploader,
+};

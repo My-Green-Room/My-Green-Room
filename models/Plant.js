@@ -16,10 +16,8 @@ const plantSchema = new Schema({
     type: String,
     enum: ['low', 'medium', 'high']
   },
-  trim: {
-    type: String,
-    enum: ['low', 'medium', 'high']
-  },
+  trim: Boolean,
+  
   description: String,
 
   owner: {
@@ -28,11 +26,7 @@ const plantSchema = new Schema({
   },
   score: Number,
 
-  imgPath: {
-    type: String,
-    enum: ['phase1', 'phase2', 'phase3', 'phase4', 'phase5']
-
-  }
+  imgPath: [String],
 
 });
 
