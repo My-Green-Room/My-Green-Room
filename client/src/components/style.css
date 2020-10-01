@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 
-
+h1 {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 24px;
+}
 
 .nav-container {
   font-family: 'Amatic SC', cursive;
@@ -33,6 +37,10 @@
   flex-wrap: wrap;
 }
 
-
+.login {
+  font-family: 'Amatic SC', cursive;
+  color: green;
+  font-size: 24px;
+}
 
 
