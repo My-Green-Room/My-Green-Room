@@ -22,8 +22,19 @@ const plantSchema = new Schema({
   },
   description: String,
 
-  owner: { type: Schema.Types.ObjectId, ref: 'User' }
+  owner: {
+    type: Schema.Types.ObjectId,
+    ref: 'User'
+  },
+  score: Number,
+
+  imgPath: {
+    type: String,
+    enum: ['phase1', 'phase2', 'phase3', 'phase4', 'phase5']
+
+  }
+
 });
 
-const project = mongoose.model('Project', projectSchema);
-module.exports = project;
+const Plant = mongoose.model('Plant', plantSchema);
+module.exports = Plant;
