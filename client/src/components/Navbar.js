@@ -1,19 +1,45 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
-import { Logout } from './Login';
-import './style.css'
+import { logout } from '../services/auth';
 
-class Navbar extends Component {
-  render() {
-    return (
-      <nav className="nav-container">
-        <a href="#" class="nav-button" id="cat">LOGIN</a>
-        <a href="#" class="nav-button" id="cat">SIGNUP</a>
-        <a href="#" class="nav-button" id="cat">LOGOUT</a>
-      </nav>
-    )
-  }
+
+const handleLogout = props => {
+  logout().then(() => {
+    props.setUser(null);
+  })
 }
 
+export default function Navbar(props) {
+  return (
+      <nav className="nav-container">
+      <ul>
+     
+      {props.user && <nav>Welcome {props.user.username}! </nav>}
 
-export default Navbar;
+      
+
+      {props.user ? (
+        <>
+      
+           <li class="nav-button"><Link to='/room/:id'>Your Green Room</Link> </li>
+
+          
+
+      
+           <li class="nav-button" > <Link to='/' onClick={() => handleLogout(props)}>Logout</Link> </li> 
+        </>
+      ) : (
+          <>
+          
+          <li class="nav-button" > <Link to='/signup'>Signup</Link> </li> 
+            
+        
+          <li class="nav-button"> <Link to='/login'>Login</Link></li> 
+         
+          </>
+        )}
+     
+    </ul>
+    </nav>
+  )
+}
