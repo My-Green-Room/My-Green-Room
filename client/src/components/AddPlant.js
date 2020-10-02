@@ -1,53 +1,47 @@
 import React, { Component } from "react";
 import "./style.css";
+import nursery from "../assets/nursery.json"
+
 
 class AddPlant extends Component {
   render() {
     return (
       <div>
        <h1> Add Your Plant!</h1>
-       
-        <form onSubmit={this.props.handleSubmit}>
-        
-        <label>Nickname: </label>
-        <input
-          type='text'
-          name='nickname'
-          value={this.props.nickname}
-        />
 
-         <label>Description: </label>
-        <input
-          type='text'
-          name='description'
-          value={this.props.nickname}
-        />
+        <img src={this.props.plantCat.imgPath} style={{"height": "100px"}}></img>
+        <div>
+        <strong>Nickname: </strong>
+        <span>{this.props.plantCat.nickname}
+        </span>
+        </div>
 
-         <label>Water: </label>
-        <input
-          type='text'
-          name='water'
-          value={this.props.water}
+        <div>
+         <strong>Description: </strong>
+        <span>{this.props.plantCat.description}
+          </span>
+        </div>
 
-        />
+        <div>
+         <strong>Water: </strong>
+        <span>{this.props.plantCat.water}
 
-         <label>Sun: </label>
-        <input
-          type='text'
-          name='sun'
-          value={this.props.sun}
-        />
+          </span>
+</div>
 
-        <label>Trim: </label>
-        <input
-          type='boolean'
-          name='trim'
-          value={this.props.trim}
-        />
+<div>
+         <strong>Sun: </strong>
+        <span>{this.props.plantCat.sun}
+          </span>
+</div>
 
-<button type='submit'>Add your plant!</button>
-      
-    </form>
+<div>
+        <strong>Trim: </strong>
+        <span>{this.props.plantCat.trim}
+          </span>
+</div>
+<button type='submit' onClink={this.props.submitNewPlant}>Add your plant!</button>
+    
 
 
         <button onClick={this.props.closeAddForm}>Close Add Form</button>
