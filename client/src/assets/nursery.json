@@ -10,8 +10,8 @@
     "imgPath": "https://res.cloudinary.com/grnroom/image/upload/v1601632664/Nursery/IMG_6716_u1escz.jpg"
   },
   {
-    "nickname": "Spike",
-    "category": "cactus",
+    "nickname": "Weedy",
+    "category": "herbs",
     "water": "low",
     "sun": "low",
     "trim": false,
@@ -20,8 +20,8 @@
     "imgPath": "https://res.cloudinary.com/grnroom/image/upload/v1601632652/Nursery/IMG_6717_eex7uc.jpg"
   },
   {
-    "nickname": "Spike",
-    "category": "cactus",
+    "nickname": "Miam",
+    "category": "succulent",
     "water": "low",
     "sun": "low",
     "trim": false,
@@ -31,8 +31,8 @@
   },
 
   {
-    "nickname": "Spike",
-    "category": "cactus",
+    "nickname": "Flore",
+    "category": "flower",
     "water": "low",
     "sun": "low",
     "trim": false,
@@ -41,8 +41,8 @@
     "imgPath": "https://res.cloudinary.com/grnroom/image/upload/v1601632630/Nursery/IMG_6719_jjgzjt.jpg"
   },
   {
-    "nickname": "Spike",
-    "category": "cactus",
+    "nickname": "Maison",
+    "category": "homeplant",
     "water": "low",
     "sun": "low",
     "trim": false,

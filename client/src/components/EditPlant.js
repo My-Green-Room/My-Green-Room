@@ -6,7 +6,7 @@ class EditPlant extends Component {
     return (
       <div>
         <h2>Edit your Plant!</h2>
-        <button onClick={this.props.closeEditForm}>Close Edit Form</button>
+        
 
         <form onSubmit={this.props.handleSubmit}>
           <label>Nickname: </label>
@@ -42,6 +42,7 @@ class EditPlant extends Component {
           />
 
           <button type="submit">Edit</button>
+          <button onClick={this.props.closeEditForm}>Close Edit Form</button>
         </form>
       </div>
     );
