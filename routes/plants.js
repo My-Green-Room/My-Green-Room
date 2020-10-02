@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express();
 const Plant = require("../models/Plant");
-const nursery = require("../nursery.json");
+// const nursery = require("../nursery.json");
 
 // get nursery
 router.get("/", (req, res) => {
-  console.log(nursery);
-  res.status(200).json(nursery);
+  // console.log(nursery);
+  // res.status(200).json(nursery);
 });
 
 // delete a plant
@@ -31,7 +31,7 @@ router.post("/", (req, res) => {
     description,
     imgPath,
   } = req.body;
-  Project.create({
+  Plant.create({
     nickname,
     category,
     water,
