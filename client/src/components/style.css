@@ -1,26 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Josefin+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+.gmnd {
+  font-family: "EB Garamond";
+	font-style: normal;
+	font-weight: 400;
+    font-size: 7vmin;
+    line-height: 1.1;
+    letter-spacing: -0.2rem;
+    margin-left: 3vmin;
+    margin-right: 3vmin;
+}
+
 
 h1 {
-  font-family: 'Amatic SC', cursive;
-  font-weight: bold;
-  font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3vmin;
+}
+
+
+p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 19px;
+  margin-left: 3em;
 }
 
 .nav-container {
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3vmin;
+  font-weight: lighter;
   display: flex;
   flex-direction: row-reverse;
+  border: black;
+  
 }
 
 .my-green-room {
-  font-family: 'Amatic SC', cursive;
-  color: green;
-  font-size: 56px;
+  font-family: "EB Garamond";
+  color: #8CFF98;
+  font-weight: lighter;
+  font-size: 11vmin;
+  text-align: left;
+  margin-left: 3vmin;
+
 }
 
 .home-container {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 2em;
 
 }
 
@@ -37,10 +70,54 @@ h1 {
   flex-wrap: wrap;
 }
 
-.login {
-  font-family: 'Amatic SC', cursive;
-  color: green;
-  font-size: 24px;
+.plant-button {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  color: black;
+  background-color:#44c767;
+  font-size: 4vmin;
+  margin-right: 2em;
+  margin-top: 1em;
+  border-style: solid;
+  padding: 5px 10px;
+  border-width: 2px;
+  border-radius: 25px;
+  display:inline-block;
+	cursor:pointer;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #2f6627;
 }
 
+.plant-button:hover {
+	background-color:#5cbf2a;
+}
+.plant-button:active {
+	position:relative;
+	top:1px;
+}
+
+.nav-button {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  color: black;
+  font-size: 4vmin;
+  margin-right: 2em;
+  margin-top: 1em;
+  border-style: solid;
+  padding: 5px 10px;
+  border-width: 2px;
+  border-radius: 25px;
+  display:inline-block;
+	cursor:pointer;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #2f6627;
+}
+
+.nav-button:hover {
+background-color: cornflowerblue;
+}
+.nav-button:active {
+	position:relative;
+	top:1px;
+}
 

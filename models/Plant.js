@@ -17,7 +17,7 @@ const plantSchema = new Schema({
     enum: ['low', 'medium', 'high']
   },
   trim: Boolean,
-  
+
   description: String,
 
   owner: {
