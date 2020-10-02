@@ -13,7 +13,7 @@ class Room extends Component {
             <AddPlant />
             <EditPlant />
             <PlantDetails />
-          </div >
+          </div>
           <div className="plant-container">
             <img />
             <img />
