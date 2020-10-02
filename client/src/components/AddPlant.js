@@ -5,7 +5,7 @@ class AddPlant extends Component {
   render() {
     return (
       <div>
-
+        AddPlant
       </div>
     )
   }

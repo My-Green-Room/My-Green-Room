@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Navbar from "./Navbar";
 import AddPlant from "./AddPlant";
 import EditPlant from "./EditPlant";
 import PlantDetails from "./PlantDetails";
@@ -9,7 +8,6 @@ class Room extends Component {
   render() {
     return (
       <div>
-        <Navbar />
         <div className="room-container">
           <div>
             <AddPlant />
@@ -25,11 +23,11 @@ class Room extends Component {
           </div>
 
           <div class="button-container">
-            <button>herbs</button>
-            <button>succulent</button>
-            <button>flower</button>
-            <button>home plant</button>
-            <button>cactus</button>
+            <a href="#" class="plant-button" id="cat">herbs</a>
+            <a href="#" class="plant-button" id="cat">succulent</a>
+            <a href="#" class="plant-button" id="cat">flower</a>
+            <a href="#" class="plant-button" id="cat">home plant</a>
+            <a href="#" class="plant-button" id="cat">cactus</a>
           </div>
 
 
