@@ -1,0 +1,53 @@
+[
+  {
+    "nickname": "Spike",
+    "category": "cactus",
+    "water": "low",
+    "sun": "low",
+    "trim": false,
+    "description": "These prickly, shapely and rarely thirsty guys are the best choice for people who like to forget watering plants. Yes, they can hurt, but they only use their prickles or thorns to ward off enemies. Instead they enchant with their wonderful flowers.",
+    "score": 0,
+    "imgPath": "https://res.cloudinary.com/grnroom/image/upload/v1601632664/Nursery/IMG_6716_u1escz.jpg"
+  },
+  {
+    "nickname": "Spike",
+    "category": "cactus",
+    "water": "low",
+    "sun": "low",
+    "trim": false,
+    "description": "These prickly, shapely and rarely thirsty guys are the best choice for people who like to forget watering plants. Yes, they can hurt, but they only use their prickles or thorns to ward off enemies. Instead they enchant with their wonderful flowers.",
+    "score": 1,
+    "imgPath": "https://res.cloudinary.com/grnroom/image/upload/v1601632652/Nursery/IMG_6717_eex7uc.jpg"
+  },
+  {
+    "nickname": "Spike",
+    "category": "cactus",
+    "water": "low",
+    "sun": "low",
+    "trim": false,
+    "description": "These prickly, shapely and rarely thirsty guys are the best choice for people who like to forget watering plants. Yes, they can hurt, but they only use their prickles or thorns to ward off enemies. Instead they enchant with their wonderful flowers.",
+    "score": 2,
+    "imgPath": "https://res.cloudinary.com/grnroom/image/upload/v1601632642/Nursery/IMG_6718_jy8hbu.jpg"
+  },
+
+  {
+    "nickname": "Spike",
+    "category": "cactus",
+    "water": "low",
+    "sun": "low",
+    "trim": false,
+    "description": "These prickly, shapely and rarely thirsty guys are the best choice for people who like to forget watering plants. Yes, they can hurt, but they only use their prickles or thorns to ward off enemies. Instead they enchant with their wonderful flowers.",
+    "score": 3,
+    "imgPath": "https://res.cloudinary.com/grnroom/image/upload/v1601632630/Nursery/IMG_6719_jjgzjt.jpg"
+  },
+  {
+    "nickname": "Spike",
+    "category": "cactus",
+    "water": "low",
+    "sun": "low",
+    "trim": false,
+    "description": "These prickly, shapely and rarely thirsty guys are the best choice for people who like to forget watering plants. Yes, they can hurt, but they only use their prickles or thorns to ward off enemies. Instead they enchant with their wonderful flowers.",
+    "score": 4,
+    "imgPath": "https://res.cloudinary.com/grnroom/image/upload/v1601632621/Nursery/IMG_6720_cqnpok.jpg"
+  }
+]
