@@ -21,20 +21,20 @@ export default function Navbar(props) {
       {props.user ? (
         <>
       
-           <li class="nav-button"><Link to='/room/:id'>Your Green Room</Link> </li>
+           <li className="nav-button"><Link to='/room/:id'>Your Green Room</Link> </li>
 
           
 
       
-           <li class="nav-button" > <Link to='/' onClick={() => handleLogout(props)}>Logout</Link> </li> 
+           <li className="nav-button" > <Link to='/' onClick={() => handleLogout(props)}>Logout</Link> </li> 
         </>
       ) : (
           <>
           
-          <li class="nav-button" > <Link to='/signup'>Signup</Link> </li> 
+          <li className="nav-button" > <Link to='/signup'>Signup</Link> </li> 
             
         
-          <li class="nav-button"> <Link to='/login'>Login</Link></li> 
+          <li className="nav-button"> <Link to='/login'>Login</Link></li> 
          
           </>
         )}
