@@ -6,6 +6,8 @@ class PlantDetails extends Component {
     return (
       <div>
         PlantDetails
+
+        <button type='submit'>Edit</button>
       </div>
     )
   }
