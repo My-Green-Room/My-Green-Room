@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Redirect} from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import Navbar from "./Navbar";
 import AddPlant from "./AddPlant";
 import EditPlant from "./EditPlant";
@@ -20,15 +20,15 @@ class Room extends Component {
   };
 
   handleAddForm = (event) => {
-    let selectedPlantCat = nursery.find(plant=> {
-      if(plant.category == event.target.id) {
+    let selectedPlantCat = nursery.find(plant => {
+      if (plant.category == event.target.id) {
         return plant
       }
     })
     this.setState({
       plantBtnId: event.target.id,
       addForm: true,
-      selectedPlantCatDefault : selectedPlantCat
+      selectedPlantCatDefault: selectedPlantCat
     });
   };
 
@@ -38,7 +38,7 @@ class Room extends Component {
       .then(response => {
         console.log(response)
         this.setState({
-    addForm: false,
+          addForm: false,
 
         })
         return <Redirect to='/room' />
@@ -73,22 +73,22 @@ class Room extends Component {
       <div>
         <Navbar />
         <div class="button-container">
-            <button id="herbs" onClick={this.handleAddForm}>
-              herbs
+          <button id="herbs" onClick={this.handleAddForm}>
+            herbs
             </button>
-            <button id="succulent" onClick={this.handleAddForm}>
-              succulent
+          <button id="succulent" onClick={this.handleAddForm}>
+            succulent
             </button>
-            <button id="flower" onClick={this.handleAddForm}>
-              flower
+          <button id="flower" onClick={this.handleAddForm}>
+            flower
             </button>
-            <button id="homeplant" onClick={this.handleAddForm}>
-              home plant
+          <button id="homeplant" onClick={this.handleAddForm}>
+            home plant
             </button>
-            <button id="cactus" onClick={this.handleAddForm}>
-              cactus
+          <button id="cactus" onClick={this.handleAddForm}>
+            cactus
             </button>
-          </div>
+        </div>
         <div className="room-container">
           <div>
             {this.state.addForm ? (
@@ -98,25 +98,25 @@ class Room extends Component {
                 submitNewPlant={this.submitNewPlant}
               />
             ) : (
-              <></>
-            )}
+                <></>
+              )}
             {this.state.editForm ? (
               <EditPlant
                 closeEditForm={this.closeEditForm}
               />
             ) : (
-              <></>
-            )}
+                <></>
+              )}
             {this.state.plantDetailsForm ? (
-            <PlantDetails
+              <PlantDetails
                 closeEditForm={this.closeEditForm} />
             ) : (
-              <></>
-            )}
+                <></>
+              )}
           </div>
 
         </div>
-          
+
       </div>
     );
   }

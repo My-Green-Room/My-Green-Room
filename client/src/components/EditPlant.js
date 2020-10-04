@@ -6,7 +6,7 @@ class EditPlant extends Component {
     return (
       <div>
         <h2>Edit your Plant!</h2>
-        
+
 
         <form onSubmit={this.props.handleSubmit}>
           <label>Nickname: </label>

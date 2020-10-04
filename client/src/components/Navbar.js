@@ -17,8 +17,7 @@ class Navbar extends Component {
   }
 
 
-
-  const handleLogout = props => {
+  handleLogout = props => {
     logout().then(() => {
       props.setUser(null);
     })

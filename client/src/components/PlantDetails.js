@@ -6,9 +6,9 @@ class PlantDetails extends Component {
     return (
       <div>
 
-<form onSubmit={this.props.handleSubmit}>
+        <form onSubmit={this.props.handleSubmit}>
 
-  <h1>Plant Details</h1>
+          <h1>Plant Details</h1>
 
           <label>Nickname: </label>
           <input
