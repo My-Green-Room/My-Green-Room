@@ -5,25 +5,14 @@ import { Login } from './Login';
 // import { logout } from '../services/auth';
 import './style.css'
 
-class Navbar extends Component {
-  render() {
-    return (
-      <nav className="nav-container">
-        <a href="/" class="nav-button" id="cat">LOGOUT</a>
-        <a href="/signup" class="nav-button" id="cat">SIGNUP</a>
-        <a href="login" class="nav-button" id="cat">LOGIN</a>
-      </nav>
-    )
-  }
+const handleLogout = props => {
+  logout().then(() => {
+    props.setUser(null);
+  })
+}
 
+function Navbar(props) {
 
-  handleLogout = props => {
-    logout().then(() => {
-      props.setUser(null);
-    })
-  }
-
-export default function Navbar(props) {
   return (
     <nav className="nav-container">
       <ul>
@@ -57,3 +46,5 @@ export default function Navbar(props) {
     </nav>
   )
 }
+
+export default Navbar;
