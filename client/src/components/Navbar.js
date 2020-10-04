@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { Login } from './Login';
-// Please compare Syntax!!!!!
-// import { logout } from '../services/auth';
+import { logout } from '../services/auth';
 import './style.css'
 
 const handleLogout = props => {
@@ -24,20 +23,20 @@ function Navbar(props) {
         {props.user ? (
           <>
 
-            <li className="nav-button"><Link to='/room/:id'>Your Green Room</Link> </li>
+            <li><Link className="nav-button" to='/room/:id'>Your Green Room</Link> </li>
 
 
 
 
-            <li className="nav-button" > <Link to='/' onClick={() => handleLogout(props)}>Logout</Link> </li>
+            <li > <Link className="nav-button" to='/' onClick={() => handleLogout(props)}>Logout</Link> </li>
           </>
         ) : (
             <>
 
-              <li className="nav-button" > <Link to='/signup'>Signup</Link> </li>
+              <li> <Link className="nav-button" to='/signup'>Signup</Link> </li>
 
 
-              <li className="nav-button"> <Link to='/login'>Login</Link></li>
+              <li > <Link className="nav-button" to='/login'>Login</Link></li>
 
             </>
           )}

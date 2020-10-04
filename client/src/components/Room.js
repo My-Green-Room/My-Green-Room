@@ -73,19 +73,19 @@ class Room extends Component {
       <div>
         <Navbar />
         <div class="button-container">
-          <button id="herbs" onClick={this.handleAddForm}>
+          <button className="plant-button" id="herbs" onClick={this.handleAddForm}>
             herbs
             </button>
-          <button id="succulent" onClick={this.handleAddForm}>
+          <button className="plant-button" id="succulent" onClick={this.handleAddForm}>
             succulent
             </button>
-          <button id="flower" onClick={this.handleAddForm}>
+          <button className="plant-button" id="flower" onClick={this.handleAddForm}>
             flower
             </button>
-          <button id="homeplant" onClick={this.handleAddForm}>
+          <button className="plant-button" id="homeplant" onClick={this.handleAddForm}>
             home plant
             </button>
-          <button id="cactus" onClick={this.handleAddForm}>
+          <button className="plant-button" id="cactus" onClick={this.handleAddForm}>
             cactus
             </button>
         </div>
