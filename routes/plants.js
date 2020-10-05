@@ -65,4 +65,17 @@ router.put("/:id", (req, res) => {
     });
 });
 
+router.get("/:userid", (req, res) => {
+  console.log("this req.params.user", req.params.userid)
+  Plant.find({owner:req.params.userid}).then((plants) => {
+    res.status(200).json(plants);
+
+  })
+  .catch((error) => {
+    res.json(error);
+  });
+
+
+})
+
 module.exports = router;

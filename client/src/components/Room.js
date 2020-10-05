@@ -7,7 +7,13 @@ import PlantDetails from "./PlantDetails";
 import "./style.css";
 import axios from "axios";
 
+<<<<<<< HEAD
 import nursery from "../assets/nursery.json";
+=======
+import nursery from "../assets/nursery.json"
+import LivingRoom from "./LivingRoom";
+
+>>>>>>> master
 
 class Room extends Component {
   state = {
@@ -69,9 +75,9 @@ class Room extends Component {
   };
 
   render() {
+    {console.log(this.props.user)}
     return (
       <div>
-        <Navbar />
         <div class="button-container">
           <button id="herbs" onClick={this.handleAddForm}>
             herbs
@@ -111,6 +117,10 @@ class Room extends Component {
               <></>
             )}
           </div>
+<<<<<<< HEAD
+=======
+<LivingRoom user= {this.props.user} />
+>>>>>>> master
         </div>
       </div>
     );

@@ -23,9 +23,31 @@ class AddPlant extends Component {
         </div>
 
         <div>
+<<<<<<< HEAD
           <strong>Water: </strong>
           <span>{this.props.plantCat.water}</span>
         </div>
+=======
+         <strong>Water: </strong>
+        <span>{this.props.plantCat.water}
+
+          </span>
+</div>
+
+<div>
+         <strong>Sun: </strong>
+        <span>{this.props.plantCat.sun}
+          </span>
+</div>
+
+<div>
+        <strong>Trim: </strong>
+        <span>{this.props.plantCat.trim}
+          </span>
+</div>
+<button type='submit' onClick={this.props.submitNewPlant}>Add your plant!</button>
+    
+>>>>>>> master
 
         <div>
           <strong>Sun: </strong>
