@@ -8,6 +8,7 @@ import "./style.css";
 import axios from "axios";
 
 import nursery from "../assets/nursery.json"
+import LivingRoom from "./LivingRoom";
 
 
 class Room extends Component {
@@ -69,9 +70,9 @@ class Room extends Component {
   };
 
   render() {
+    {console.log(this.props.user)}
     return (
       <div>
-        <Navbar />
         <div class="button-container">
             <button id="herbs" onClick={this.handleAddForm}>
               herbs
@@ -114,7 +115,7 @@ class Room extends Component {
               <></>
             )}
           </div>
-
+<LivingRoom user= {this.props.user} />
         </div>
           
       </div>

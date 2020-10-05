@@ -33,7 +33,7 @@ class App extends Component {
         <Route
           exact
           path='/room'
-          render={props => <Room setUser={this.setUser} {...props} />}
+          render={props => <Room setUser={this.setUser} {...props} user={this.state.user}/>}
         />
 
 

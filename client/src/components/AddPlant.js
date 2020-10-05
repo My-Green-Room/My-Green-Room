@@ -40,7 +40,7 @@ class AddPlant extends Component {
         <span>{this.props.plantCat.trim}
           </span>
 </div>
-<button type='submit' onClink={this.props.submitNewPlant}>Add your plant!</button>
+<button type='submit' onClick={this.props.submitNewPlant}>Add your plant!</button>
     
 
 
