@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import PlantDetails from "./PlantDetails"
 
 export default class LivingRoom extends Component {
   state = {
@@ -23,7 +24,7 @@ export default class LivingRoom extends Component {
       <div>
         <h1>That's the Living Room!</h1>
 
-        {allPlants}
+        {allPlants} {this.props.handlePlantDetailsForm}
       </div>
     );
   }

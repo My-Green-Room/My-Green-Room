@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './style.css'
 
+
 class PlantDetails extends Component {
   render() {
     return (
@@ -34,8 +35,8 @@ class PlantDetails extends Component {
 </div>
 
 <div>
-        <strong>Trim: </strong>
-        <span>{this.props.plantCat.trim}
+        <strong>Soil </strong>
+        <span>{this.props.plantCat.soil}
           </span>
 </div>
 </div>

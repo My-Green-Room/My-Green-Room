@@ -114,7 +114,7 @@ class Room extends Component {
               <></>
             )}
           </div>
-          <LivingRoom user={this.props.user} />
+          <LivingRoom user={this.props.user} DisplayPlantDetails={this.handlePlantDetailsForm} />
         </div>
       </div>
     );
