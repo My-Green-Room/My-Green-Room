@@ -54,7 +54,7 @@
     "category": "leafyplant",
     "water": "low",
     "sun": "high",
-    "soil": false,
+    "soil": "well-drained",
     "description": "Beautifully shaped, striking and lush - foliage plants form the most successful and largest group of indoor plants. There is the right specimen for every room and every room climate. These beauties change the room climate and are admired by every visitor.",
     "score": 0,
     "imgPath": [
