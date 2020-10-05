@@ -27,7 +27,7 @@ router.post("/", (req, res) => {
     category,
     water,
     sun,
-    trim,
+    soil,
     description,
     imgPath,
   } = req.body;
@@ -36,7 +36,7 @@ router.post("/", (req, res) => {
     category,
     water,
     sun,
-    trim,
+    soil,
     description,
     imgPath,
     owner: req.user._id,
@@ -54,7 +54,7 @@ router.put("/:id", (req, res) => {
   const { title, description } = req.body;
   Project.findByIdAndUpdate(
     req.params.id,
-    { nickname, category, water, sun, trim, description, imgPath },
+    { nickname, category, water, sun, soil, description, imgPath },
     { new: true }
   )
     .then((project) => {
@@ -65,6 +65,8 @@ router.put("/:id", (req, res) => {
     });
 });
 
+
+//looking for a specific user's plants and showing it in the room
 router.get("/:userid", (req, res) => {
   console.log("this req.params.user", req.params.userid)
   Plant.find({owner:req.params.userid}).then((plants) => {

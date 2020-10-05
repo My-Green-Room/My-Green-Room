@@ -1,20 +1,14 @@
 import React, { Component } from "react";
 import axios from "axios";
+import PlantDetails from "./PlantDetails"
 
 export default class LivingRoom extends Component {
-  state = {
-    plants: [],
-  };
 
-  componentDidMount() {
-    axios.get(`/api/plants/${this.props.user._id}`).then((plants) => {
-      console.log(plants.data, typeof plants.data);
-      this.setState({ plants: plants.data });
-    });
-  }
+
+ 
 
   render() {
-    let allPlants = this.state.plants.map((plant, index) => (
+    let allPlants = this.props.plants.map((plant, index) => (
       <img className={`plant plant${index}`} src={plant.imgPath[0]} />
     ));
     console.log("this is allPlants", allPlants);
@@ -23,7 +17,7 @@ export default class LivingRoom extends Component {
       <div>
         <h1>That's the Living Room!</h1>
 
-        {allPlants}
+        {allPlants} {this.props.handlePlantDetailsForm}
       </div>
     );
   }

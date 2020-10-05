@@ -12,6 +12,7 @@ class AddPlant extends Component {
           src={this.props.plantCat.imgPath}
           style={{ height: "100px" }}
         ></img>
+        
         <div>
           <strong>Nickname: </strong>
           <span>{this.props.plantCat.nickname}</span>
@@ -33,8 +34,8 @@ class AddPlant extends Component {
         </div>
 
         <div>
-          <strong>Trim: </strong>
-          <span>{this.props.plantCat.trim}</span>
+          <strong>Soil: </strong>
+          <span>{this.props.plantCat.soil}</span>
         </div>
         <button type="submit" onClick={this.props.submitNewPlant}>
           Add your plant!

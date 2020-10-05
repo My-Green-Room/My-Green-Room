@@ -6,7 +6,7 @@ const plantSchema = new Schema({
   nickname: String,
   category: {
     type: String,
-    enum: ['cactus', 'flower', 'succulent', 'herb', 'homeplant']
+    enum: ['cacti', 'leafyplants', 'succulent', 'fern', 'peperomies']
   },
   water: {
     type: String,
@@ -16,7 +16,7 @@ const plantSchema = new Schema({
     type: String,
     enum: ['low', 'medium', 'high']
   },
-  trim: Boolean,
+  soil: String,
 
   description: String,
 
