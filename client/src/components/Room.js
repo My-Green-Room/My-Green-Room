@@ -17,7 +17,14 @@ class Room extends Component {
     editForm: false,
     plantDetailsForm: false,
     selectedPlantCatDefault: {},
+    plants: [],
   };
+  componentDidMount() {
+    axios.get(`/api/plants/${this.props.user._id}`).then((plants) => {
+      console.log(plants.data, typeof plants.data);
+      this.setState({ plants: plants.data });
+    });
+  }
 
   handleAddForm = (event) => {
     let selectedPlantCat = nursery.find((plant) => {
@@ -39,8 +46,9 @@ class Room extends Component {
     axios
       .post("/api/plants", this.state.selectedPlantCatDefault)
       .then((response) => {
-        console.log("please work", response);
+        console.log("please work", response.data);
         this.setState({
+          plants: [...this.state.plants, response.data],
           addForm: false,
         });
         return <Redirect to="/room" />;
@@ -76,20 +84,20 @@ class Room extends Component {
     return (
       <div>
         <div class="button-container">
-          <button id="herbs" onClick={this.handleAddForm}>
-            herbs
+          <button id="cacti" onClick={this.handleAddForm}>
+            Cactus
+          </button>
+          <button id="leafyplant" onClick={this.handleAddForm}>
+            Leafy Plant
           </button>
           <button id="succulent" onClick={this.handleAddForm}>
-            succulent
+            Succulent
           </button>
-          <button id="flower" onClick={this.handleAddForm}>
-            flower
+          <button id="fern" onClick={this.handleAddForm}>
+            Fern
           </button>
-          <button id="homeplant" onClick={this.handleAddForm}>
-            home plant
-          </button>
-          <button id="cactus" onClick={this.handleAddForm}>
-            cactus
+          <button id="peperomies" onClick={this.handleAddForm}>
+            Peperomie
           </button>
         </div>
         <div className="room-container">
@@ -114,7 +122,11 @@ class Room extends Component {
               <></>
             )}
           </div>
-          <LivingRoom user={this.props.user} />
+          <LivingRoom
+            user={this.props.user}
+            plants={this.state.plants}
+            DisplayPlantDetails={this.handlePlantDetailsForm}
+          />
         </div>
       </div>
     );

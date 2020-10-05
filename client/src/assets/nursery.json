@@ -1,10 +1,10 @@
 [
   {
     "nickname": "Spike",
-    "category": "cactus",
+    "category": "cacti",
     "water": "low",
     "sun": "low",
-    "trim": false,
+    "soil": "Sandy,coarse",
     "description": "These prickly, shapely and rarely thirsty guys are the best choice for people who like to forget watering plants. Yes, they can hurt, but they only use their prickles or thorns to ward off enemies. Instead they enchant with their wonderful flowers.",
     "score": 0,
     "imgPath": [
@@ -17,12 +17,12 @@
   },
 
   {
-    "nickname": "Weedy",
-    "category": "herbs",
-    "water": "low",
-    "sun": "low",
-    "trim": false,
-    "description": "These prickly, shapely and rarely thirsty guys are the best choice for people who like to forget watering plants. Yes, they can hurt, but they only use their prickles or thorns to ward off enemies. Instead they enchant with their wonderful flowers.",
+    "nickname": "Pizza",
+    "category": "peperomies",
+    "water": "medium",
+    "sun": "medium",
+    "soil": "well-drained",
+    "description": "Pretty and small, but what they lack in size, they make up for with their beautiful leaves. Although they all look very different, they all delight with their fleshy decorative leaves. It is time to jump on the bandwagon of the peperomies.",
     "score": 0,
     "imgPath": [
       "https://res.cloudinary.com/grnroom/image/upload/v1601891971/Nursery/Leaves1_nncv5v.png",
@@ -36,9 +36,9 @@
     "nickname": "Miam",
     "category": "succulent",
     "water": "low",
-    "sun": "low",
-    "trim": false,
-    "description": "These prickly, shapely and rarely thirsty guys are the best choice for people who like to forget watering plants. Yes, they can hurt, but they only use their prickles or thorns to ward off enemies. Instead they enchant with their wonderful flowers.",
+    "sun": "high",
+    "soil": "well-drained",
+    "description": "This group of plants is very diverse and adaptable. With their fleshy, water-storing leaves and unusual shapes, these plants not only look good, they are also easy to care for. Many of them can be propagated easily and thrive lushly if the conditions are right - the perfect choice for the thrifty indoor gardener.",
     "score": 0,
     "imgPath": [
       "https://res.cloudinary.com/grnroom/image/upload/v1601891970/Nursery/Pennies1_ndw4av.png",
@@ -50,12 +50,12 @@
   },
 
   {
-    "nickname": "Flore",
-    "category": "flower",
+    "nickname": "Monsti",
+    "category": "leafyplant",
     "water": "low",
-    "sun": "low",
-    "trim": false,
-    "description": "These prickly, shapely and rarely thirsty guys are the best choice for people who like to forget watering plants. Yes, they can hurt, but they only use their prickles or thorns to ward off enemies. Instead they enchant with their wonderful flowers.",
+    "sun": "high",
+    "soil": false,
+    "description": "Beautifully shaped, striking and lush - foliage plants form the most successful and largest group of indoor plants. There is the right specimen for every room and every room climate. These beauties change the room climate and are admired by every visitor.",
     "score": 0,
     "imgPath": [
       "https://res.cloudinary.com/grnroom/image/upload/v1601891971/Nursery/Monstera1_vdq2do.png",
@@ -66,12 +66,12 @@
     ]
   },
   {
-    "nickname": "Maison",
-    "category": "homeplant",
+    "nickname": "Fergi",
+    "category": "fern",
     "water": "low",
-    "sun": "low",
-    "trim": false,
-    "description": "These prickly, shapely and rarely thirsty guys are the best choice for people who like to forget watering plants. Yes, they can hurt, but they only use their prickles or thorns to ward off enemies. Instead they enchant with their wonderful flowers.",
+    "sun": "high",
+    "soil": "retaining water",
+    "description": "Ferns should not be missing in any plant collection, even NASA praises their air-purifying properties. Some bring back nasty memories of granny's house, while graceful, playful ferns will do the work of watching the pretty green mane grow.",
     "score": 0,
     "imgPath": [
       "https://res.cloudinary.com/grnroom/image/upload/v1601891970/Nursery/Glove1_ckiwf1.png",
