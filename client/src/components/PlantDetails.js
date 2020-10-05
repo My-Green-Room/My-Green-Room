@@ -6,53 +6,39 @@ class PlantDetails extends Component {
     return (
       <div>
 
-<form onSubmit={this.props.handleSubmit}>
-
   <h1>Plant Details</h1>
 
-          <label>Nickname: </label>
-          <input
-            type="text"
-            name="nickname"
-            value={this.props.nickname}
-          />
+  <div>
+        <strong>Nickname: </strong>
+        <span>{this.props.plantCat.nickname}
+        </span>
+        </div>
 
-          <label>Description: </label>
-          <input
-            type="text"
-            name="description"
-            value={this.props.description}
+        <div>
+         <strong>Description: </strong>
+        <span>{this.props.plantCat.description}
+          </span>
+        </div>
 
-          />
+        <div>
+         <strong>Water: </strong>
+        <span>{this.props.plantCat.water}
 
-          <label>Water: </label>
-          <input
-            type="text"
-            name="water"
-            value={this.props.water}
-          />
+          </span>
+</div>
 
-          <label>Sun: </label>
-          <input
-            type="text"
-            name="sun"
-            value={this.props.sun}
+<div>
+         <strong>Sun: </strong>
+        <span>{this.props.plantCat.sun}
+          </span>
+</div>
 
-          />
-
-          <label>Trim: </label>
-          <input
-            type="boolean"
-            name="trim"
-            value={this.props.trim}
-          />
-
-          <button type="submit">Edit</button>
-          <button onClick={this.props.closeEditForm}>Close Edit Form</button>
-
-          <button type='submit'>Edit</button>
-        </form>
-      </div>
+<div>
+        <strong>Trim: </strong>
+        <span>{this.props.plantCat.trim}
+          </span>
+</div>
+</div>
     )
   }
 }
