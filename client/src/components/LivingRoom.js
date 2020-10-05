@@ -1,11 +1,19 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import PlantDetails from "./PlantDetails";
 
 export default class LivingRoom extends Component {
+  state = {
+    inquiredPlant: "",
+  };
   render() {
     let allPlants = this.props.plants.map((plant, index) => (
-      <img className={`plant plant${index}`} src={plant.imgPath[0]} />
+      <img
+        className={`plant plant${index}`}
+        src={plant.imgPath[0]}
+        onClick={() => this.props.DisplayPlantDetails(plant._id)}
+      />
     ));
 
     console.log("this is allPlants", allPlants);

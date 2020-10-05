@@ -18,6 +18,7 @@ class Room extends Component {
     plantDetailsForm: false,
     selectedPlantCatDefault: {},
     plants: [],
+    inquiredPlant: "",
   };
   componentDidMount() {
     axios.get(`/api/plants/${this.props.user._id}`).then((plants) => {
@@ -36,6 +37,7 @@ class Room extends Component {
       plantBtnId: event.target.id,
       addForm: true,
       selectedPlantCatDefault: selectedPlantCat,
+      plantDetailsForm: false,
     });
     console.log(this.state);
   };
@@ -63,13 +65,18 @@ class Room extends Component {
     this.setState({
       plantId: event.target.id,
       editForm: true,
+      plantDetailsForm: false,
     });
   };
 
-  handlePlantDetailsForm = (event) => {
+  handlePlantDetailsForm = (plantId) => {
+    let inquiredPlant = this.state.plants.find(
+      (plant) => plant._id === plantId
+    );
     this.setState({
-      plantId: event.target.id,
-      PlandDetailsForm: true,
+      inquiredPlant: inquiredPlant,
+      plantDetailsForm: true,
+      addForm: false,
     });
   };
 
@@ -116,10 +123,11 @@ class Room extends Component {
             ) : (
               <></>
             )}
-            {this.state.plantDetailsForm ? (
-              <PlantDetails closeEditForm={this.closeEditForm} />
-            ) : (
-              <></>
+            {this.state.plantDetailsForm && (
+              <PlantDetails
+                closeEditForm={this.closeEditForm}
+                plant={this.state.inquiredPlant}
+              />
             )}
           </div>
           <LivingRoom
