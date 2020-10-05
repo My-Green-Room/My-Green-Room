@@ -88,6 +88,7 @@ class Room extends Component {
     {
       console.log(this.props.user);
     }
+    console.log(this.state.selectedPlantCatDefault)
     return (
       <div>
         <div class="button-container">
