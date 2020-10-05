@@ -7,13 +7,8 @@ import PlantDetails from "./PlantDetails";
 import "./style.css";
 import axios from "axios";
 
-<<<<<<< HEAD
 import nursery from "../assets/nursery.json";
-=======
-import nursery from "../assets/nursery.json"
 import LivingRoom from "./LivingRoom";
-
->>>>>>> master
 
 class Room extends Component {
   state = {
@@ -75,7 +70,9 @@ class Room extends Component {
   };
 
   render() {
-    {console.log(this.props.user)}
+    {
+      console.log(this.props.user);
+    }
     return (
       <div>
         <div class="button-container">
@@ -117,10 +114,7 @@ class Room extends Component {
               <></>
             )}
           </div>
-<<<<<<< HEAD
-=======
-<LivingRoom user= {this.props.user} />
->>>>>>> master
+          <LivingRoom user={this.props.user} />
         </div>
       </div>
     );
