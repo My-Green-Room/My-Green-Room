@@ -28,6 +28,39 @@ class Room extends Component {
     });
   }
 
+<<<<<<< HEAD
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.inquiredPlant !== this.state.inquiredPlant) {
+      axios.get(`/api/plants/${this.props.user._id}`).then((plants) => {
+        console.log(plants.data, typeof plants.data);
+        this.setState({ plants: plants.data });
+      });
+    }
+  }
+
+  deletePlant = (id) => {
+    axios
+      .delete(`/api/plants/${id}`)
+      .then(() => {
+        let filteredPlants = this.state.plants.filter((plant) => {
+          if (plant._id == id) {
+            return false;
+          }
+          return true;
+        });
+
+        this.setState({
+          plants: filteredPlants,
+        });
+        this.props.history.push("/room");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+=======
+>>>>>>> master
   handleAddForm = (event) => {
     let selectedPlantCat = nursery.find((plant) => {
       if (plant.category == event.target.id) {
@@ -70,6 +103,17 @@ class Room extends Component {
     });
   };
 
+<<<<<<< HEAD
+  toggleEditForm = () => {
+    console.log("living the dream");
+    this.setState((state) => ({
+      editForm: !state.editForm,
+      plantDetailsForm: false,
+      addForm: false,
+    }));
+  };
+=======
+>>>>>>> master
 
   handlePlantDetailsForm = (plantId) => {
     let inquiredPlant = this.state.plants.find(
@@ -94,10 +138,17 @@ class Room extends Component {
   };
 
   render() {
+<<<<<<< HEAD
+    {
+      console.log(this.props.user);
+    }
+    console.log(this.state.selectedPlantCatDefault);
+=======
     
       console.log(this.props.user);
     console.log(this.state.plants)
     console.log(this.state.selectedPlantCatDefault)
+>>>>>>> master
     return (
       <div>
         <div class="button-container">
@@ -143,6 +194,9 @@ class Room extends Component {
               <PlantDetails
                 closeEditForm={this.closeEditForm}
                 plant={this.state.inquiredPlant}
+                toggleEditForm={this.toggleEditForm}
+                deletePlant={this.deletePlant}
+                id={this.state.inquiredPlant._id}
               />
             )}
           </div>

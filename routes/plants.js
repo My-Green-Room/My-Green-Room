@@ -2,7 +2,7 @@ const express = require("express");
 const router = express();
 const Plant = require("../models/Plant");
 // const nursery = require("../nursery.json");
-const { loginCheck } = require("../routes/middlewares")
+const { loginCheck } = require("../routes/middlewares");
 
 // get nursery
 router.get("/", (req, res) => {
@@ -12,7 +12,9 @@ router.get("/", (req, res) => {
 
 // delete a plant
 router.delete("/:id", loginCheck(), (req, res) => {
-  Project.findByIdAndDelete(req.params.id)
+  console.log(req.params.id);
+  console.log("waddup new york?");
+  Plant.findByIdAndDelete(req.params.id)
     .then((plant) => {
       res.status(200).json({
         message: "ok",
