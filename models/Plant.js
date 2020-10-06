@@ -28,10 +28,5 @@ const plantSchema = new Schema({
   imgPath: [String],
 });
 
-<<<<<<< HEAD
-const Plant = mongoose.model("Plant", plantSchema);
-module.exports = Plant;
-=======
 const Plant = mongoose.model('Plant', plantSchema);
 module.exports = Plant;
->>>>>>> master
