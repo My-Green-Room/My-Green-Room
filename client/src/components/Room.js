@@ -19,6 +19,7 @@ class Room extends Component {
     selectedPlantCatDefault: {},
     plants: [],
     inquiredPlant: "",
+    score:0,
   };
   componentDidMount() {
     axios.get(`/api/plants/${this.props.user._id}`).then((plants) => {
@@ -85,10 +86,17 @@ class Room extends Component {
     this.setState({ editForm: false });
   };
 
+  handleWatering = () => {
+    console.log("Zähler für alle Pflanzen", )
+    this.setState({
+      score:this.state.score+1
+    })
+  };
+
   render() {
-    {
+    
       console.log(this.props.user);
-    }
+    console.log(this.state.plants)
     console.log(this.state.selectedPlantCatDefault)
     return (
       <div>
@@ -112,6 +120,7 @@ class Room extends Component {
         <div>
           <button id="watering" onClick={this.handleWatering}>
             Watering
+            
           </button>
         </div>
         <div className="room-container">
@@ -140,6 +149,7 @@ class Room extends Component {
           <LivingRoom
             user={this.props.user}
             plants={this.state.plants}
+            score={this.state.score}
             DisplayPlantDetails={this.handlePlantDetailsForm}
           />
         </div>
