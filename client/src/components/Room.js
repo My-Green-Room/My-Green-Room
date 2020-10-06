@@ -19,6 +19,7 @@ class Room extends Component {
     selectedPlantCatDefault: {},
     plants: [],
     inquiredPlant: "",
+    score:0,
   };
   componentDidMount() {
     axios.get(`/api/plants/${this.props.user._id}`).then((plants) => {
@@ -27,6 +28,7 @@ class Room extends Component {
     });
   }
 
+<<<<<<< HEAD
   componentDidUpdate(prevProps, prevState) {
     if (prevState.inquiredPlant !== this.state.inquiredPlant) {
       axios.get(`/api/plants/${this.props.user._id}`).then((plants) => {
@@ -57,6 +59,8 @@ class Room extends Component {
       });
   };
 
+=======
+>>>>>>> master
   handleAddForm = (event) => {
     let selectedPlantCat = nursery.find((plant) => {
       if (plant.category == event.target.id) {
@@ -99,6 +103,7 @@ class Room extends Component {
     });
   };
 
+<<<<<<< HEAD
   toggleEditForm = () => {
     console.log("living the dream");
     this.setState((state) => ({
@@ -107,6 +112,8 @@ class Room extends Component {
       addForm: false,
     }));
   };
+=======
+>>>>>>> master
 
   handlePlantDetailsForm = (plantId) => {
     let inquiredPlant = this.state.plants.find(
@@ -123,11 +130,25 @@ class Room extends Component {
     this.setState({ editForm: false });
   };
 
+  handleWatering = () => {
+    console.log("Zähler für alle Pflanzen", )
+    this.setState({
+      score:this.state.score+1
+    })
+  };
+
   render() {
+<<<<<<< HEAD
     {
       console.log(this.props.user);
     }
     console.log(this.state.selectedPlantCatDefault);
+=======
+    
+      console.log(this.props.user);
+    console.log(this.state.plants)
+    console.log(this.state.selectedPlantCatDefault)
+>>>>>>> master
     return (
       <div>
         <div class="button-container">
@@ -147,6 +168,12 @@ class Room extends Component {
             Peperomie
           </button>
         </div>
+        <div>
+          <button id="watering" onClick={this.handleWatering}>
+            Watering
+            
+          </button>
+        </div>
         <div className="room-container">
           <div>
             {this.state.addForm ? (
@@ -156,16 +183,13 @@ class Room extends Component {
                 submitNewPlant={this.submitNewPlant}
               />
             ) : (
-              <></>
-            )}
+                <></>
+              )}
             {this.state.editForm ? (
-              <EditPlant
-                closeEditForm={this.closeEditForm}
-                plant={this.state.inquiredPlant}
-              />
+              <EditPlant closeEditForm={this.closeEditForm} />
             ) : (
-              <></>
-            )}
+                <></>
+              )}
             {this.state.plantDetailsForm && (
               <PlantDetails
                 closeEditForm={this.closeEditForm}
@@ -179,6 +203,7 @@ class Room extends Component {
           <LivingRoom
             user={this.props.user}
             plants={this.state.plants}
+            score={this.state.score}
             DisplayPlantDetails={this.handlePlantDetailsForm}
           />
         </div>
