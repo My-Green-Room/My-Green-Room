@@ -14,7 +14,7 @@ class Room extends Component {
   state = {
     plantBtnId: "",
     addForm: false,
-    editForm: true,
+    editForm: false,
     plantDetailsForm: false,
     selectedPlantCatDefault: {},
     plants: [],
@@ -25,15 +25,6 @@ class Room extends Component {
       console.log(plants.data, typeof plants.data);
       this.setState({ plants: plants.data });
     });
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.inquiredPlant !== this.state.inquiredPlant) {
-      axios.get(`/api/plants/${this.props.user._id}`).then((plants) => {
-        console.log(plants.data, typeof plants.data);
-        this.setState({ plants: plants.data });
-      });
-    }
   }
 
   handleAddForm = (event) => {
@@ -78,6 +69,7 @@ class Room extends Component {
     });
   };
 
+
   handlePlantDetailsForm = (plantId) => {
     let inquiredPlant = this.state.plants.find(
       (plant) => plant._id === plantId
@@ -95,9 +87,9 @@ class Room extends Component {
 
   render() {
     {
-      console.log("this is user", this.props.user._id);
+      console.log(this.props.user);
     }
-    console.log(this.state.selectedPlantCatDefault);
+    console.log(this.state.selectedPlantCatDefault)
     return (
       <div>
         <div class="button-container">
@@ -117,6 +109,11 @@ class Room extends Component {
             Peperomie
           </button>
         </div>
+        <div>
+          <button id="watering" onClick={this.handleWatering}>
+            Watering
+          </button>
+        </div>
         <div className="room-container">
           <div>
             {this.state.addForm ? (
@@ -126,16 +123,13 @@ class Room extends Component {
                 submitNewPlant={this.submitNewPlant}
               />
             ) : (
-              <></>
-            )}
+                <></>
+              )}
             {this.state.editForm ? (
-              <EditPlant
-                closeEditForm={this.closeEditForm}
-                plant={this.state.inquiredPlant}
-              />
+              <EditPlant closeEditForm={this.closeEditForm} />
             ) : (
-              <></>
-            )}
+                <></>
+              )}
             {this.state.plantDetailsForm && (
               <PlantDetails
                 closeEditForm={this.closeEditForm}

@@ -86,7 +86,7 @@ router.get("/plantDetails/:plantid", loginCheck(), (req, res) => {
     });
 });
 //looking for a specific user's plants and showing it in the room
-router.get("/:userid",loginCheck(), (req, res) => {
+router.get("/:userid", loginCheck(), (req, res) => {
   console.log("this req.params.user", req.params.userid);
   Plant.find({
     owner: req.params.userid,
