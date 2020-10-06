@@ -13,7 +13,9 @@ router.get("/", (req, res) => {
 router.delete("/:id", (req, res) => {
   Project.findByIdAndDelete(req.params.id)
     .then((plant) => {
-      res.status(200).json({ message: "ok" });
+      res.status(200).json({
+        message: "ok",
+      });
     })
     .catch((error) => {
       res.json(error);
@@ -51,14 +53,32 @@ router.post("/", (req, res) => {
 
 // update a plant
 router.put("/:id", (req, res) => {
-  const { title, description } = req.body;
-  Project.findByIdAndUpdate(
+  const { nickname, water, sun, soil } = req.body;
+  Plant.findByIdAndUpdate(
     req.params.id,
-    { nickname, category, water, sun, soil, description, imgPath },
-    { new: true }
+    {
+      nickname,
+      water,
+      sun,
+      soil,
+    },
+    {
+      new: true,
+    }
   )
     .then((project) => {
       res.status(200).json(project);
+    })
+    .catch((error) => {
+      res.json(error);
+    });
+});
+// we are adding this to get the plant details
+router.get("/plantDetails/:plantid", (req, res) => {
+  console.log("this req.params.plantid", req.params.plantid);
+  Plant.findById(req.params.plantid)
+    .then((plant) => {
+      res.status(200).json(plant);
     })
     .catch((error) => {
       res.json(error);
@@ -68,7 +88,9 @@ router.put("/:id", (req, res) => {
 //looking for a specific user's plants and showing it in the room
 router.get("/:userid", (req, res) => {
   console.log("this req.params.user", req.params.userid);
-  Plant.find({ owner: req.params.userid })
+  Plant.find({
+    owner: req.params.userid,
+  })
     .then((plants) => {
       res.status(200).json(plants);
     })
