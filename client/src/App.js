@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Room from "./components/Room";
 import Home from "./components/Home";
 import PlantDetails from "./components/PlantDetails";
+import EditPlant from "./components/EditPlant";
 
 class App extends Component {
   state = {
@@ -33,9 +34,11 @@ class App extends Component {
         <Route
           exact
           path="/room"
-          render={(props) => (
-            <Room setUser={this.setUser} {...props} user={this.state.user} />
-          )}
+          render={(props) => { 
+            if (this.state.user) {
+              return <Room setUser={this.setUser} {...props} user={this.state.user} />
+          } else return <Redirect to='/' />
+              }}
         />
 
         <Route
@@ -59,6 +62,18 @@ class App extends Component {
           exact
           path="/login"
           render={(props) => <Login setUser={this.setUser} {...props} />}
+        />
+
+        <Route
+          exact
+          path="/room/:id"
+          render={(props) => (
+            <EditPlant
+              setUser={this.setUser}
+              user={this.state.user}
+              {...props}
+            />
+          )}
         />
       </div>
     );

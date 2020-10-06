@@ -19,7 +19,6 @@ class Room extends Component {
     selectedPlantCatDefault: {},
     plants: [],
     inquiredPlant: "",
-    score: 0,
   };
   componentDidMount() {
     axios.get(`/api/plants/${this.props.user._id}`).then((plants) => {
@@ -69,6 +68,7 @@ class Room extends Component {
       plantDetailsForm: false,
     });
   };
+
 
   handlePlantDetailsForm = (plantId) => {
     let inquiredPlant = this.state.plants.find(

@@ -31,3 +31,14 @@ export default class LivingRoom extends Component {
     }
   };
 
+  console.log("this is allPlants", this.props.plants);
+  console.log("this is the user inside the living room", this.props.user._id);
+  return(
+      <div>
+  <h1>That's the Living Room!</h1>
+{ allPlants }
+{ this.props.handlePlantDetailsForm }
+      </div >
+    );
+  }
+}
