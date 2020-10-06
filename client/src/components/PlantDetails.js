@@ -46,6 +46,16 @@ class PlantDetails extends Component {
           <strong>Soil </strong>
           <span>{this.props.plant.soil}</span>
         </div>
+
+        <div>
+        <button type="submit">
+          Delete your plant!
+        </button>
+
+        <button type="submit">
+          Edit your plant!
+        </button>
+      </div>
       </div>
     );
   }
