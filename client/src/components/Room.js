@@ -19,6 +19,7 @@ class Room extends Component {
     selectedPlantCatDefault: {},
     plants: [],
     inquiredPlant: "",
+    score: 0,
   };
   componentDidMount() {
     axios.get(`/api/plants/${this.props.user._id}`).then((plants) => {
@@ -108,6 +109,11 @@ class Room extends Component {
             Peperomie
           </button>
         </div>
+        <div>
+          <button id="watering" onClick={this.handleWatering}>
+            Watering
+          </button>
+        </div>
         <div className="room-container">
           <div>
             {this.state.addForm ? (
@@ -117,13 +123,13 @@ class Room extends Component {
                 submitNewPlant={this.submitNewPlant}
               />
             ) : (
-              <></>
-            )}
+                <></>
+              )}
             {this.state.editForm ? (
               <EditPlant closeEditForm={this.closeEditForm} />
             ) : (
-              <></>
-            )}
+                <></>
+              )}
             {this.state.plantDetailsForm && (
               <PlantDetails
                 closeEditForm={this.closeEditForm}
