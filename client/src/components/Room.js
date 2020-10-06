@@ -19,7 +19,7 @@ class Room extends Component {
     selectedPlantCatDefault: {},
     plants: [],
     inquiredPlant: "",
-    score:0,
+    score: 0,
   };
   componentDidMount() {
     axios.get(`/api/plants/${this.props.user._id}`).then((plants) => {
@@ -28,7 +28,6 @@ class Room extends Component {
     });
   }
 
-<<<<<<< HEAD
   componentDidUpdate(prevProps, prevState) {
     if (prevState.inquiredPlant !== this.state.inquiredPlant) {
       axios.get(`/api/plants/${this.props.user._id}`).then((plants) => {
@@ -59,8 +58,6 @@ class Room extends Component {
       });
   };
 
-=======
->>>>>>> master
   handleAddForm = (event) => {
     let selectedPlantCat = nursery.find((plant) => {
       if (plant.category == event.target.id) {
@@ -103,7 +100,6 @@ class Room extends Component {
     });
   };
 
-<<<<<<< HEAD
   toggleEditForm = () => {
     console.log("living the dream");
     this.setState((state) => ({
@@ -112,8 +108,6 @@ class Room extends Component {
       addForm: false,
     }));
   };
-=======
->>>>>>> master
 
   handlePlantDetailsForm = (plantId) => {
     let inquiredPlant = this.state.plants.find(
@@ -123,6 +117,7 @@ class Room extends Component {
       inquiredPlant: inquiredPlant,
       plantDetailsForm: true,
       addForm: false,
+      editForm: false,
     });
   };
 
@@ -131,24 +126,21 @@ class Room extends Component {
   };
 
   handleWatering = () => {
-    console.log("Zähler für alle Pflanzen", )
+    console.log("Zähler für alle Pflanzen");
     this.setState({
-      score:this.state.score+1
-    })
+      score: this.state.score + 1,
+    });
   };
 
   render() {
-<<<<<<< HEAD
     {
       console.log(this.props.user);
     }
     console.log(this.state.selectedPlantCatDefault);
-=======
-    
-      console.log(this.props.user);
-    console.log(this.state.plants)
-    console.log(this.state.selectedPlantCatDefault)
->>>>>>> master
+
+    console.log(this.props.user);
+    console.log(this.state.plants);
+    console.log(this.state.selectedPlantCatDefault);
     return (
       <div>
         <div class="button-container">
@@ -171,7 +163,6 @@ class Room extends Component {
         <div>
           <button id="watering" onClick={this.handleWatering}>
             Watering
-            
           </button>
         </div>
         <div className="room-container">
@@ -183,13 +174,16 @@ class Room extends Component {
                 submitNewPlant={this.submitNewPlant}
               />
             ) : (
-                <></>
-              )}
+              <></>
+            )}
             {this.state.editForm ? (
-              <EditPlant closeEditForm={this.closeEditForm} />
+              <EditPlant
+                closeEditForm={this.closeEditForm}
+                plant={this.state.inquiredPlant}
+              />
             ) : (
-                <></>
-              )}
+              <></>
+            )}
             {this.state.plantDetailsForm && (
               <PlantDetails
                 closeEditForm={this.closeEditForm}
