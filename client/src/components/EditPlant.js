@@ -33,11 +33,11 @@ class EditPlant extends Component {
             onChange={this.props.handleChange}
           />
 
-          <label>Trim: </label>
+          <label>Soil: </label>
           <input
-            type="boolean"
-            name="trim"
-            value={this.props.trim}
+            type="text"
+            name="soil"
+            value={this.props.soil}
             onChange={this.props.handleChange}
           />
 
