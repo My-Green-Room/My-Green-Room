@@ -1,6 +1,5 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-
 
 const plantSchema = new Schema({
   nickname: String,
@@ -10,11 +9,11 @@ const plantSchema = new Schema({
   },
   water: {
     type: String,
-    enum: ['low', 'medium', 'high']
+    enum: ["low", "medium", "high"],
   },
   sun: {
     type: String,
-    enum: ['low', 'medium', 'high']
+    enum: ["low", "medium", "high"],
   },
   soil: String,
 
@@ -22,13 +21,17 @@ const plantSchema = new Schema({
 
   owner: {
     type: Schema.Types.ObjectId,
-    ref: 'User'
+    ref: "User",
   },
   score: Number,
 
   imgPath: [String],
-
 });
 
+<<<<<<< HEAD
+const Plant = mongoose.model("Plant", plantSchema);
+module.exports = Plant;
+=======
 const Plant = mongoose.model('Plant', plantSchema);
 module.exports = Plant;
+>>>>>>> master

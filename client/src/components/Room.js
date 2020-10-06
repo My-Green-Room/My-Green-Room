@@ -17,7 +17,8 @@ class Room extends Component {
     editForm: false,
     plantDetailsForm: false,
     selectedPlantCatDefault: {},
-    plants: []
+    plants: [],
+    inquiredPlant: "",
   };
   componentDidMount() {
     axios.get(`/api/plants/${this.props.user._id}`).then((plants) => {
@@ -36,6 +37,7 @@ class Room extends Component {
       plantBtnId: event.target.id,
       addForm: true,
       selectedPlantCatDefault: selectedPlantCat,
+      plantDetailsForm: false,
     });
     console.log(this.state);
   };
@@ -63,13 +65,18 @@ class Room extends Component {
     this.setState({
       plantId: event.target.id,
       editForm: true,
+      plantDetailsForm: false,
     });
   };
 
-  handlePlantDetailsForm = (event) => {
+  handlePlantDetailsForm = (plantId) => {
+    let inquiredPlant = this.state.plants.find(
+      (plant) => plant._id === plantId
+    );
     this.setState({
-      plantId: event.target.id,
-      PlandDetailsForm: true,
+      inquiredPlant: inquiredPlant,
+      plantDetailsForm: true,
+      addForm: false,
     });
   };
 
@@ -86,19 +93,19 @@ class Room extends Component {
       <div>
         <div class="button-container">
           <button id="cacti" onClick={this.handleAddForm}>
-          Cactus
+            Cactus
           </button>
           <button id="leafyplant" onClick={this.handleAddForm}>
-          Leafy Plant
+            Leafy Plant
           </button>
           <button id="succulent" onClick={this.handleAddForm}>
-          Succulent
+            Succulent
           </button>
           <button id="fern" onClick={this.handleAddForm}>
             Fern
           </button>
           <button id="peperomies" onClick={this.handleAddForm}>
-          Peperomie
+            Peperomie
           </button>
         </div>
         <div className="room-container">
@@ -117,13 +124,18 @@ class Room extends Component {
             ) : (
               <></>
             )}
-            {this.state.plantDetailsForm ? (
-              <PlantDetails closeEditForm={this.closeEditForm} />
-            ) : (
-              <></>
+            {this.state.plantDetailsForm && (
+              <PlantDetails
+                closeEditForm={this.closeEditForm}
+                plant={this.state.inquiredPlant}
+              />
             )}
           </div>
-          <LivingRoom user={this.props.user} plants={this.state.plants} DisplayPlantDetails={this.handlePlantDetailsForm} />
+          <LivingRoom
+            user={this.props.user}
+            plants={this.state.plants}
+            DisplayPlantDetails={this.handlePlantDetailsForm}
+          />
         </div>
       </div>
     );

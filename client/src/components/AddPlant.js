@@ -12,7 +12,7 @@ class AddPlant extends Component {
           src={this.props.plantCat.imgPath}
           style={{ height: "100px" }}
         ></img>
-        
+
         <div>
           <strong>Nickname: </strong>
           <span>{this.props.plantCat.nickname}</span>
