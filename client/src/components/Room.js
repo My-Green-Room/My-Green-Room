@@ -14,7 +14,7 @@ class Room extends Component {
   state = {
     plantBtnId: "",
     addForm: false,
-    editForm: true,
+    editForm: false,
     plantDetailsForm: false,
     selectedPlantCatDefault: {},
     plants: [],
@@ -35,6 +35,27 @@ class Room extends Component {
       });
     }
   }
+
+  deletePlant = (id) => {
+    axios
+      .delete(`/api/plants/${id}`)
+      .then(() => {
+        let filteredPlants = this.state.plants.filter((plant) => {
+          if (plant._id == id) {
+            return false;
+          }
+          return true;
+        });
+
+        this.setState({
+          plants: filteredPlants,
+        });
+        this.props.history.push("/room");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   handleAddForm = (event) => {
     let selectedPlantCat = nursery.find((plant) => {
@@ -78,6 +99,15 @@ class Room extends Component {
     });
   };
 
+  toggleEditForm = () => {
+    console.log("living the dream");
+    this.setState((state) => ({
+      editForm: !state.editForm,
+      plantDetailsForm: false,
+      addForm: false,
+    }));
+  };
+
   handlePlantDetailsForm = (plantId) => {
     let inquiredPlant = this.state.plants.find(
       (plant) => plant._id === plantId
@@ -95,7 +125,7 @@ class Room extends Component {
 
   render() {
     {
-      console.log("this is user", this.props.user._id);
+      console.log(this.props.user);
     }
     console.log(this.state.selectedPlantCatDefault);
     return (
@@ -140,6 +170,9 @@ class Room extends Component {
               <PlantDetails
                 closeEditForm={this.closeEditForm}
                 plant={this.state.inquiredPlant}
+                toggleEditForm={this.toggleEditForm}
+                deletePlant={this.deletePlant}
+                id={this.state.inquiredPlant._id}
               />
             )}
           </div>

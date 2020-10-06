@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link, Redirect } from "react-router-dom";
+import Room from "./Room";
 import EditPlant from "./EditPlant";
 import "./style.css";
 
@@ -20,6 +21,7 @@ class PlantDetails extends Component {
   // }
 
   render() {
+    console.log(this.props.id, "THIS IS THE PLANT!!!!!!");
     return (
       <div>
         <h1>Plant Details</h1>
@@ -50,11 +52,14 @@ class PlantDetails extends Component {
         </div>
 
         <div>
-          <button type="submit">Delete your plant!</button>
-
-          <button type="submit" onClick={this.props.handleEditForm}>
-            Edit your plant!
+          <button
+            class="submit"
+            onClick={() => this.props.deletePlant(this.props.id)}
+          >
+            Delete your plant!
           </button>
+
+          <button onClick={this.props.toggleEditForm}>Edit your plant!</button>
         </div>
       </div>
     );
