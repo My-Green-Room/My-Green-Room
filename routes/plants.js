@@ -65,7 +65,6 @@ router.put("/:id", (req, res) => {
     });
 });
 
-
 //looking for a specific user's plants and showing it in the room
 router.get("/:userid", (req, res) => {
   console.log("this req.params.user", req.params.userid)
