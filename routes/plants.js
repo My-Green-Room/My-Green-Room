@@ -66,18 +66,6 @@ router.put("/:id", (req, res) => {
 });
 
 //looking for a specific user's plants and showing it in the room
-router.get("/plantDetails/:plantid", (req, res) => {
-  console.log("this req.params.plantid", req.params.plantid);
-  Plant.findById(req.params.plantid)
-    .then((plant) => {
-      res.status(200).json(plant);
-    })
-    .catch((error) => {
-      res.json(error);
-    });
-});
-
-//looking for a specific user's plants and showing it in the room
 router.get("/:userid", (req, res) => {
   console.log("this req.params.user", req.params.userid);
   Plant.find({ owner: req.params.userid })
