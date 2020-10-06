@@ -2,7 +2,7 @@ const express = require("express");
 const router = express();
 const Plant = require("../models/Plant");
 // const nursery = require("../nursery.json");
-const { loginCheck } = require("../routes/middlewares")
+const { loginCheck } = require("../routes/middlewares");
 
 // get nursery
 router.get("/", (req, res) => {
@@ -12,10 +12,12 @@ router.get("/", (req, res) => {
 
 // delete a plant
 router.delete("/:id", loginCheck(), (req, res) => {
-  Project.findByIdAndDelete(req.params.id)
+  console.log(req.params.id);
+  console.log("waddup new york?");
+  Plant.findByIdAndDelete(req.params.id)
     .then((plant) => {
       res.status(200).json({
-        message: "ok"
+        message: "ok",
       });
     })
     .catch((error) => {
@@ -35,15 +37,15 @@ router.post("/", loginCheck(), (req, res) => {
     imgPath,
   } = req.body;
   Plant.create({
-      nickname,
-      category,
-      water,
-      sun,
-      soil,
-      description,
-      imgPath,
-      owner: req.user._id,
-    })
+    nickname,
+    category,
+    water,
+    sun,
+    soil,
+    description,
+    imgPath,
+    owner: req.user._id,
+  })
     .then((project) => {
       res.status(201).json(project);
     })
@@ -54,23 +56,19 @@ router.post("/", loginCheck(), (req, res) => {
 
 // update a plant
 router.put("/:id", (req, res) => {
-  const {
-    title,
-    description
-  } = req.body;
-  Project.findByIdAndUpdate(
-      req.params.id, {
-        nickname,
-        category,
-        water,
-        sun,
-        soil,
-        description,
-        imgPath
-      }, {
-        new: true
-      }
-    )
+  const { nickname, water, sun, soil } = req.body;
+  Plant.findByIdAndUpdate(
+    req.params.id,
+    {
+      nickname,
+      water,
+      sun,
+      soil,
+    },
+    {
+      new: true,
+    }
+  )
     .then((project) => {
       res.status(200).json(project);
     })
@@ -90,11 +88,11 @@ router.get("/plantDetails/:plantid", loginCheck(), (req, res) => {
     });
 });
 //looking for a specific user's plants and showing it in the room
-router.get("/:userid",loginCheck(), (req, res) => {
+router.get("/:userid", loginCheck(), (req, res) => {
   console.log("this req.params.user", req.params.userid);
   Plant.find({
-      owner: req.params.userid
-    })
+    owner: req.params.userid,
+  })
     .then((plants) => {
       res.status(200).json(plants);
     })
