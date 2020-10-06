@@ -95,7 +95,7 @@ class Room extends Component {
 
   render() {
     {
-      console.log(this.props.user);
+      console.log("this is user", this.props.user._id);
     }
     console.log(this.state.selectedPlantCatDefault);
     return (
