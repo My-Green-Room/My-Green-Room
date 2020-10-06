@@ -5,7 +5,7 @@ const plantSchema = new Schema({
   nickname: String,
   category: {
     type: String,
-    enum: ['cacti', 'leafyplant', 'succulent', 'fern', 'peperomies']
+    enum: ["cacti", "leafyplant", "succulent", "fern", "peperomies"],
   },
   water: {
     type: String,
@@ -28,10 +28,5 @@ const plantSchema = new Schema({
   imgPath: [String],
 });
 
-<<<<<<< HEAD
 const Plant = mongoose.model("Plant", plantSchema);
 module.exports = Plant;
-=======
-const Plant = mongoose.model('Plant', plantSchema);
-module.exports = Plant;
->>>>>>> master
