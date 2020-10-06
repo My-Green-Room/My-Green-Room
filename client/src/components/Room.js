@@ -14,7 +14,7 @@ class Room extends Component {
   state = {
     plantBtnId: "",
     addForm: false,
-    editForm: false,
+    editForm: true,
     plantDetailsForm: false,
     selectedPlantCatDefault: {},
     plants: [],
@@ -25,6 +25,15 @@ class Room extends Component {
       console.log(plants.data, typeof plants.data);
       this.setState({ plants: plants.data });
     });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.inquiredPlant !== this.state.inquiredPlant) {
+      axios.get(`/api/plants/${this.props.user._id}`).then((plants) => {
+        console.log(plants.data, typeof plants.data);
+        this.setState({ plants: plants.data });
+      });
+    }
   }
 
   handleAddForm = (event) => {
@@ -88,7 +97,7 @@ class Room extends Component {
     {
       console.log("this is user", this.props.user._id);
     }
-    console.log(this.state.selectedPlantCatDefault)
+    console.log(this.state.selectedPlantCatDefault);
     return (
       <div>
         <div class="button-container">
@@ -120,7 +129,10 @@ class Room extends Component {
               <></>
             )}
             {this.state.editForm ? (
-              <EditPlant closeEditForm={this.closeEditForm} />
+              <EditPlant
+                closeEditForm={this.closeEditForm}
+                plant={this.state.inquiredPlant}
+              />
             ) : (
               <></>
             )}
