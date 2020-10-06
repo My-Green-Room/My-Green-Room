@@ -77,6 +77,7 @@ router.put("/:id", (req, res) => {
       res.json(error);
     });
 });
+// we are adding this to get the plant details
 router.get("/plantDetails/:plantid", (req, res) => {
   console.log("this req.params.plantid", req.params.plantid);
   Plant.findById(req.params.plantid)
