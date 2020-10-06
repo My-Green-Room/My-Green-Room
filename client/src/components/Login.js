@@ -32,7 +32,7 @@ export default class Login extends Component {
           // now we need to put the user in the user key of the state of App.js
           this.props.setUser(data);
           // redirect to / user'room
-          this.props.history.push('/room/:id');
+          this.props.history.push('/room');
         }
 
       })
