@@ -2,6 +2,7 @@ const express = require("express");
 const router = express();
 const Plant = require("../models/Plant");
 // const nursery = require("../nursery.json");
+const { loginCheck } = require("../routes/middlewares")
 
 // get nursery
 router.get("/", (req, res) => {
@@ -10,7 +11,7 @@ router.get("/", (req, res) => {
 });
 
 // delete a plant
-router.delete("/:id", (req, res) => {
+router.delete("/:id", loginCheck(), (req, res) => {
   Project.findByIdAndDelete(req.params.id)
     .then((plant) => {
       res.status(200).json({
@@ -23,7 +24,7 @@ router.delete("/:id", (req, res) => {
 });
 
 // create a new plant
-router.post("/", (req, res) => {
+router.post("/", loginCheck(), (req, res) => {
   const {
     nickname,
     category,
@@ -78,7 +79,7 @@ router.put("/:id", (req, res) => {
     });
 });
 // we are adding this to get the plant details
-router.get("/plantDetails/:plantid", (req, res) => {
+router.get("/plantDetails/:plantid", loginCheck(), (req, res) => {
   console.log("this req.params.plantid", req.params.plantid);
   Plant.findById(req.params.plantid)
     .then((plant) => {
@@ -89,7 +90,7 @@ router.get("/plantDetails/:plantid", (req, res) => {
     });
 });
 //looking for a specific user's plants and showing it in the room
-router.get("/:userid", (req, res) => {
+router.get("/:userid",loginCheck(), (req, res) => {
   console.log("this req.params.user", req.params.userid);
   Plant.find({
       owner: req.params.userid
