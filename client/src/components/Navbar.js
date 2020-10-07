@@ -17,7 +17,7 @@ export default function Navbar(props) {
         {props.user ? (
           <>
           <ul className="room-nav">
-            <li className="welcome-message">Welcome to your Green Room {props.user.username}! </li>
+            <li className="welcome-message">Welcome to your very own Green Room {props.user.username}! </li>
             <li className="nav-button" > <Link to='/' onClick={() => handleLogout(props)}>Logout</Link> </li>
           </ul>
           </>

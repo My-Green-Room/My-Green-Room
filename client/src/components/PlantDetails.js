@@ -24,6 +24,7 @@ class PlantDetails extends Component {
     console.log(this.props.id, "THIS IS THE PLANT!!!!!!");
     return (
       <div className="interaction">
+      
 <button onClick={this.props.closePlantDetailsForm} className="close"></button>
 
         <h1>Get To Know Your Plant</h1>

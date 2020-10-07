@@ -60,8 +60,21 @@ p {
   clear:both;
 }
 input {
-   background-color: #fff !important;
+  background-color: #fff;
    border:none;
+   border-radius: 1em;
+   padding: 5px 5px 5px 5px;
+   font-weight: bold;
+   margin-top:0.8em;
+   margin-bottom:0.8em ;
+ }
+
+ #editNickname {
+  margin-bottom:0.5em ;
+ }
+
+ #editbtn {
+margin-top: 2em;
  }
 
 .homepage-nav {
@@ -161,6 +174,7 @@ input {
   color: #12330e;
   background-color: #91de99;
   font-size: 1em;
+  font-weight: bold;
   margin-right: 2em;
   border: none;
   padding: 5px 20px;
