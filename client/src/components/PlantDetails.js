@@ -37,17 +37,17 @@ class PlantDetails extends Component {
         </div>
 
         <div>
-          <strong>Water: </strong>
+          <strong><img src="https://img.icons8.com/plasticine/100/000000/plant-under-rain.png"/>: </strong>
           <span>{this.props.plant.water}</span>
         </div>
 
         <div>
-          <strong>Sun: </strong>
+          <strong><img src="https://img.icons8.com/doodle/48/000000/sun--v1.png"/> : </strong>
           <span>{this.props.plant.sun}</span>
         </div>
 
         <div>
-          <strong>Soil </strong>
+          <strong><img src="https://img.icons8.com/doodle/48/000000/hand-planting.png"/>: </strong>
           <span>{this.props.plant.soil}</span>
         </div>
 
@@ -60,6 +60,9 @@ class PlantDetails extends Component {
           </button>
 
           <button onClick={this.props.toggleEditForm}>Edit your plant!</button>
+
+          <button onClick={this.props.closePlantDetailsForm}>X</button>
+
         </div>
       </div>
     );

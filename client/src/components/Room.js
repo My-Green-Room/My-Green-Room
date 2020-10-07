@@ -126,6 +126,12 @@ class Room extends Component {
     this.setState({ editForm: false });
   };
 
+  closePlantDetailsForm = () => {
+    this.setState({ plantDetailsForm: false });
+  };
+
+
+
   handleWatering = () => {
     console.log("Zähler für alle Pflanzen");
     this.setState({
@@ -163,7 +169,7 @@ class Room extends Component {
         </div>
         <div>
           <button id="watering" onClick={this.handleWatering}>
-            Watering
+          <img src="https://img.icons8.com/doodle/50/000000/watering-can--v1.png"/>
           </button>
         </div>
         <div className="room-container">
@@ -192,6 +198,7 @@ class Room extends Component {
                 toggleEditForm={this.toggleEditForm}
                 deletePlant={this.deletePlant}
                 id={this.state.inquiredPlant._id}
+                closePlantDetailsForm={this.closePlantDetailsForm}
               />
             )}
           </div>
