@@ -56,7 +56,7 @@ class EditPlant extends Component {
     console.log(this.state, this.props.plant);
     return (
       <div>
-        <h2>Edit your Plant!</h2>
+        <h2>Customise your Plant!</h2>
 
         <form onSubmit={this.handleSubmit}>
           <label>Nickname: </label>
@@ -91,8 +91,8 @@ class EditPlant extends Component {
             onChange={this.handleChange}
           />
 
-          <button type="submit">Edit</button>
-          <button type="button" onClick= {this.props.closeEditForm}>Close Edit Form</button>
+          <button type="submit">That's My Plant!</button>
+          <button type="button" onClick= {this.props.closeEditForm}>X</button>
         </form>
       </div>
     );

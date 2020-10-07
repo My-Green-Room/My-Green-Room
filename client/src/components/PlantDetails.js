@@ -24,7 +24,7 @@ class PlantDetails extends Component {
     console.log(this.props.id, "THIS IS THE PLANT!!!!!!");
     return (
       <div>
-        <h1>Plant Details</h1>
+        <h1>Get To Know Your Plant</h1>
 
         <div>
           <strong>Nickname: </strong>
@@ -36,17 +36,17 @@ class PlantDetails extends Component {
           <span>{this.props.plant.description}</span>
         </div>
 
-        <div>
+        <div className="iconwater">
           <strong><img src="https://img.icons8.com/plasticine/100/000000/plant-under-rain.png"/>: </strong>
           <span>{this.props.plant.water}</span>
         </div>
 
-        <div>
+        <div className="icones">
           <strong><img src="https://img.icons8.com/doodle/48/000000/sun--v1.png"/> : </strong>
           <span>{this.props.plant.sun}</span>
         </div>
 
-        <div>
+        <div className="icones">
           <strong><img src="https://img.icons8.com/doodle/48/000000/hand-planting.png"/>: </strong>
           <span>{this.props.plant.soil}</span>
         </div>
@@ -56,10 +56,10 @@ class PlantDetails extends Component {
             class="submit"
             onClick={() => this.props.deletePlant(this.props.id)}
           >
-            Delete your plant!
+            Unpot your plant!
           </button>
 
-          <button onClick={this.props.toggleEditForm}>Edit your plant!</button>
+          <button onClick={this.props.toggleEditForm}>Customise your plant!</button>
 
           <button onClick={this.props.closePlantDetailsForm}>X</button>
 
