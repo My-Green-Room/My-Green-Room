@@ -27,6 +27,11 @@ export default class LivingRoom extends Component {
     console.log("Zähler für alle Pflanzen", allPlants.score);
     return (
       <div className="living-room">
+        {/* <div>
+          <button id="watering" onClick={this.handleWatering}>
+            <img src="https://img.icons8.com/doodle/50/000000/watering-can--v1.png" />
+          </button>
+        </div> */}
         {allPlants} {this.props.handlePlantDetailsForm}
       </div>
 

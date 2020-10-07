@@ -67,6 +67,7 @@ class Room extends Component {
     this.setState({
       plantBtnId: event.target.id,
       addForm: true,
+      editForm: false,
       selectedPlantCatDefault: selectedPlantCat,
       plantDetailsForm: false,
     });
@@ -125,6 +126,12 @@ class Room extends Component {
     this.setState({ editForm: false });
   };
 
+  closePlantDetailsForm = () => {
+    this.setState({ plantDetailsForm: false });
+  };
+
+
+
   handleWatering = () => {
     console.log("Zähler für alle Pflanzen");
     this.setState({
@@ -142,7 +149,7 @@ class Room extends Component {
     console.log(this.state.plants);
     console.log(this.state.selectedPlantCatDefault);
     return (
-      <div className="room-container">
+      <div>
         <div className="button-container">
           <button className="plant-button" id="cacti" onClick={this.handleAddForm}>
             Cactus
@@ -159,11 +166,11 @@ class Room extends Component {
           <button className="plant-button" id="peperomies" onClick={this.handleAddForm}>
             Peperomie
           </button>
-        </div>
-        <div>
-          <button id="watering" onClick={this.handleWatering}>
-            Watering
-          </button>
+          <div>
+            <button id="watering" onClick={this.handleWatering}>
+              <img src="https://img.icons8.com/doodle/50/000000/watering-can--v1.png" />
+            </button>
+          </div>
         </div>
         <div className="room-container">
           <div>
@@ -191,6 +198,7 @@ class Room extends Component {
                 toggleEditForm={this.toggleEditForm}
                 deletePlant={this.deletePlant}
                 id={this.state.inquiredPlant._id}
+                closePlantDetailsForm={this.closePlantDetailsForm}
               />
             )}
           </div>
