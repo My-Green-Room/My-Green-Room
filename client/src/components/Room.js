@@ -67,6 +67,7 @@ class Room extends Component {
     this.setState({
       plantBtnId: event.target.id,
       addForm: true,
+      editForm: false,
       selectedPlantCatDefault: selectedPlantCat,
       plantDetailsForm: false,
     });
@@ -105,7 +106,7 @@ class Room extends Component {
     this.setState((state) => ({
       editForm: !state.editForm,
       plantDetailsForm: false,
-      addForm: false,
+      addForm: false,    
     }));
   };
 

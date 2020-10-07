@@ -10,7 +10,7 @@ class AddPlant extends Component {
 
         <img
           src={this.props.plantCat.imgPath[0]}
-          style={{ height: "100px" }}
+          style={{ height: "40vh" }}
         ></img>
 
         <div>
