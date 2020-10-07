@@ -37,30 +37,29 @@ class PlantDetails extends Component {
         </div>
 
         <div className="iconwater">
-          <strong><img src="https://img.icons8.com/plasticine/100/000000/plant-under-rain.png"/>: </strong>
+          <strong><img src="https://img.icons8.com/plasticine/100/000000/plant-under-rain.png" />: </strong>
           <span>{this.props.plant.water}</span>
         </div>
 
         <div className="icones">
-          <strong><img src="https://img.icons8.com/doodle/48/000000/sun--v1.png"/> : </strong>
+          <strong><img src="https://img.icons8.com/doodle/48/000000/sun--v1.png" /> : </strong>
           <span>{this.props.plant.sun}</span>
         </div>
 
         <div className="icones">
-          <strong><img src="https://img.icons8.com/doodle/48/000000/hand-planting.png"/>: </strong>
+          <strong><img src="https://img.icons8.com/doodle/48/000000/hand-planting.png" />: </strong>
           <span>{this.props.plant.soil}</span>
         </div>
 
         <div>
           <button
-            class="submit"
+            className="submit-button"
             onClick={() => this.props.deletePlant(this.props.id)}
           >
             Unpot your plant!
           </button>
 
-          <button onClick={this.props.toggleEditForm}>Customise your plant!</button>
-
+          <button className="submit-button" onClick={this.props.toggleEditForm}>Customise your plant!</button>
           <button onClick={this.props.closePlantDetailsForm}>X</button>
 
         </div>

@@ -55,10 +55,10 @@ class EditPlant extends Component {
   render() {
     console.log(this.state, this.props.plant);
     return (
-      <div>
+      <div className="interaction">
         <h2>Customise your Plant!</h2>
 
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className="interaction">
           <label>Nickname: </label>
           <input
             type="text"
@@ -91,8 +91,8 @@ class EditPlant extends Component {
             onChange={this.handleChange}
           />
 
-          <button type="submit">That's My Plant!</button>
-          <button type="button" onClick= {this.props.closeEditForm}>X</button>
+          <button className="submit-button" type="submit">That's My Plant!</button>
+          <button className="submit-button" type="submit" onClick={this.props.closeEditForm}>X</button>
         </form>
       </div>
     );

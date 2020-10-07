@@ -106,7 +106,7 @@ class Room extends Component {
     this.setState((state) => ({
       editForm: !state.editForm,
       plantDetailsForm: false,
-      addForm: false,    
+      addForm: false,
     }));
   };
 
@@ -150,27 +150,27 @@ class Room extends Component {
     console.log(this.state.selectedPlantCatDefault);
     return (
       <div>
-        <div class="button-container">
-          <button id="cacti" onClick={this.handleAddForm}>
+        <div className="button-container">
+          <button className="plant-button" id="cacti" onClick={this.handleAddForm}>
             Cactus
           </button>
-          <button id="leafyplant" onClick={this.handleAddForm}>
+          <button className="plant-button" id="leafyplant" onClick={this.handleAddForm}>
             Leafy Plant
           </button>
-          <button id="succulent" onClick={this.handleAddForm}>
+          <button className="plant-button" id="succulent" onClick={this.handleAddForm}>
             Succulent
           </button>
-          <button id="fern" onClick={this.handleAddForm}>
+          <button className="plant-button" id="fern" onClick={this.handleAddForm}>
             Fern
           </button>
-          <button id="peperomies" onClick={this.handleAddForm}>
+          <button className="plant-button" id="peperomies" onClick={this.handleAddForm}>
             Peperomie
           </button>
-        </div>
-        <div>
-          <button id="watering" onClick={this.handleWatering}>
-          <img src="https://img.icons8.com/doodle/50/000000/watering-can--v1.png"/>
-          </button>
+          <div>
+            <button id="watering" onClick={this.handleWatering}>
+              <img src="https://img.icons8.com/doodle/50/000000/watering-can--v1.png" />
+            </button>
+          </div>
         </div>
         <div className="room-container">
           <div>
@@ -181,16 +181,16 @@ class Room extends Component {
                 submitNewPlant={this.submitNewPlant}
               />
             ) : (
-              <></>
-            )}
+                <></>
+              )}
             {this.state.editForm ? (
               <EditPlant
                 closeEditForm={this.closeEditForm}
                 plant={this.state.inquiredPlant}
               />
             ) : (
-              <></>
-            )}
+                <></>
+              )}
             {this.state.plantDetailsForm && (
               <PlantDetails
                 closeEditForm={this.closeEditForm}
