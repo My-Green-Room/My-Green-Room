@@ -8,6 +8,7 @@ import Room from "./components/Room";
 import Home from "./components/Home";
 import PlantDetails from "./components/PlantDetails";
 import EditPlant from "./components/EditPlant";
+import "../src/components/style.css"
 
 class App extends Component {
   state = {
@@ -22,7 +23,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div>
         <Navbar user={this.state.user} setUser={this.setUser} />
 
         <Route
@@ -34,11 +35,11 @@ class App extends Component {
         <Route
           exact
           path="/room"
-          render={(props) => { 
+          render={(props) => {
             if (this.state.user) {
               return <Room setUser={this.setUser} {...props} user={this.state.user} />
-          } else return <Redirect to='/' />
-              }}
+            } else return <Redirect to='/' />
+          }}
         />
 
         <Route

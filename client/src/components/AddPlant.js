@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import "./style.css";
 import nursery from "../assets/nursery.json";
+import "./style.css"
 
 class AddPlant extends Component {
   render() {
     return (
-      <div>
+      <div className="interaction">
         <h1> Add Your Plant!</h1>
 
         <img
@@ -37,11 +38,11 @@ class AddPlant extends Component {
           <strong>Soil: </strong>
           <span>{this.props.plantCat.soil}</span>
         </div>
-        <button type="submit" onClick={this.props.submitNewPlant}>
+        <button className="submit-button" type="submit" onClick={this.props.submitNewPlant}>
           Add your plant!
         </button>
 
-        <button onClick={this.props.closeAddForm}>Close Add Form</button>
+        <button className="submit-button" onClick={this.props.closeAddForm}>Close Add Form</button>
       </div>
     );
   }

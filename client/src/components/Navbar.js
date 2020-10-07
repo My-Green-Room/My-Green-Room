@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { logout } from '../services/auth';
+import "./style.css"
 
 
 const handleLogout = props => {
@@ -11,23 +12,23 @@ const handleLogout = props => {
 
 export default function Navbar(props) {
   return (
-      <nav className="nav-container">
-      <ul> 
-         {props.user ? (
-        <>
-           <li>Welcome to your Green Room {props.user.username}! </li>
-           <li className="nav-button" > <Link to='/' onClick={() => handleLogout(props)}>Logout</Link> </li> 
-        </>
-      ) : (
+    <nav className="nav-container">
+      <ul>
+        {props.user ? (
           <>
-          
-          <li className="nav-button" > <Link to='/signup'>Signup</Link> </li> 
-          <li className="nav-button"> <Link to='/login'>Login</Link></li> 
-         
+            <li>Welcome to your Green Room {props.user.username}! </li>
+            <li className="nav-button" > <Link to='/' onClick={() => handleLogout(props)}>Logout</Link> </li>
           </>
-        )}
-     
-    </ul>
+        ) : (
+            <>
+
+              <li className="nav-button" > <Link to='/signup'>Signup</Link> </li>
+              <li className="nav-button"> <Link to='/login'>Login</Link></li>
+
+            </>
+          )}
+
+      </ul>
     </nav>
   )
 }

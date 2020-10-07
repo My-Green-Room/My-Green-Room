@@ -142,21 +142,21 @@ class Room extends Component {
     console.log(this.state.plants);
     console.log(this.state.selectedPlantCatDefault);
     return (
-      <div>
-        <div class="button-container">
-          <button id="cacti" onClick={this.handleAddForm}>
+      <div className="room-container">
+        <div className="button-container">
+          <button className="plant-button" id="cacti" onClick={this.handleAddForm}>
             Cactus
           </button>
-          <button id="leafyplant" onClick={this.handleAddForm}>
+          <button className="plant-button" id="leafyplant" onClick={this.handleAddForm}>
             Leafy Plant
           </button>
-          <button id="succulent" onClick={this.handleAddForm}>
+          <button className="plant-button" id="succulent" onClick={this.handleAddForm}>
             Succulent
           </button>
-          <button id="fern" onClick={this.handleAddForm}>
+          <button className="plant-button" id="fern" onClick={this.handleAddForm}>
             Fern
           </button>
-          <button id="peperomies" onClick={this.handleAddForm}>
+          <button className="plant-button" id="peperomies" onClick={this.handleAddForm}>
             Peperomie
           </button>
         </div>
@@ -174,16 +174,16 @@ class Room extends Component {
                 submitNewPlant={this.submitNewPlant}
               />
             ) : (
-              <></>
-            )}
+                <></>
+              )}
             {this.state.editForm ? (
               <EditPlant
                 closeEditForm={this.closeEditForm}
                 plant={this.state.inquiredPlant}
               />
             ) : (
-              <></>
-            )}
+                <></>
+              )}
             {this.state.plantDetailsForm && (
               <PlantDetails
                 closeEditForm={this.closeEditForm}

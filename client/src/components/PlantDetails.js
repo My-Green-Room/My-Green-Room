@@ -53,13 +53,13 @@ class PlantDetails extends Component {
 
         <div>
           <button
-            class="submit"
+            className="submit-button"
             onClick={() => this.props.deletePlant(this.props.id)}
           >
             Delete your plant!
           </button>
 
-          <button onClick={this.props.toggleEditForm}>Edit your plant!</button>
+          <button className="submit-button" onClick={this.props.toggleEditForm}>Edit your plant!</button>
         </div>
       </div>
     );

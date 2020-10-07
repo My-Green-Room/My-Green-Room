@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import PlantDetails from "./PlantDetails";
 import Room from "./Room";
+import "./style.css"
 
 export default class LivingRoom extends Component {
   state = {
@@ -25,10 +26,10 @@ export default class LivingRoom extends Component {
     console.log("this is the user inside the living room", this.props.user._id);
     console.log("Zähler für alle Pflanzen", allPlants.score);
     return (
-      <div>
-        <h1>That's the Living Room!</h1>
+      <div className="living-room">
         {allPlants} {this.props.handlePlantDetailsForm}
       </div>
+
     );
   }
 }

@@ -3,15 +3,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
-.gmnd {
+
+.home-text { 
   font-family: "EB Garamond";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 7vmin;
-  line-height: 1.1;
-  letter-spacing: -0.2rem;
-  margin-left: 3vmin;
-  margin-right: 3vmin;
+	font-style: normal;
+	font-weight: 400;
+    font-size: 7vmin;
+    line-height: 1.1;
+    letter-spacing: -0.2rem;
+    margin-left: 3vmin;
+    margin-right: 3vmin;
 }
 
 h1 {
@@ -20,7 +21,13 @@ h1 {
 }
 
 p {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-size: 19px;
+  margin-left: 3em;
+}
+
+.labels {
+  font-family: "Open Sans", sans-serif;
   font-size: 19px;
   margin-left: 3em;
 }
@@ -30,8 +37,20 @@ p {
   font-size: 3vmin;
   font-weight: lighter;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row-reverse; 
   border: black;
+}
+
+.home-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  display: flex;
+  flex-direction: row;
+}
+
+.room-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 
 .my-green-room {
@@ -43,24 +62,20 @@ p {
   margin-left: 3vmin;
 }
 
-.home-container {
+.interaction {
+  display: flex;
+  flex-direction: column;
+}
+
+.living-room {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  margin-left: 2em;
-}
-
-.room-container {
-  display: flex;
-}
-
-.plant-container {
-  display: flex;
+  flex-wrap: wrap;
 }
 
 .button-container {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 
@@ -114,6 +129,33 @@ p {
   position: relative;
   top: 1px;
 }
+
+.submit-button {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  background-color: #77D9A1;
+  color: black;
+  font-size: 4vmin;
+  margin-right: 2em;
+  margin-top: 1em;
+  border-style: solid;
+  padding: 5px 10px;
+  border-width: 2px;
+  border-radius: 10px;
+  display:inline-block;
+	cursor: pointer;
+  text-decoration: none;
+  text-shadow:0px 1px 0px #2f6627;
+}
+
+.submit-button:hover {
+background-color: #F27D72;
+}
+.submit-button:active {
+	position:relative;
+	top:1px;
+}
+
 
 .plant {
   width: 30vh;

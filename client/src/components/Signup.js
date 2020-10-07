@@ -41,29 +41,31 @@ export default class Signup extends Component {
   render() {
     return (
       <>
-        <h2>Signup</h2>
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="username">Username: </label>
-          <input
-            type='text'
-            name='username'
-            value={this.state.username}
-            onChange={this.handleChange}
-            id='username'
-          />
-          <label htmlFor="password">Password: </label>
-          <input
-            type='password'
-            name='password'
-            value={this.state.password}
-            onChange={this.handleChange}
-            id='password'
-          />
-          {this.state.message && (
-            <p>{this.state.message}</p>
-          )}
-          <button type='submit'>Signup</button>
-        </form>
+        <div className="interaction">
+          <h2>Signup</h2>
+          <form onSubmit={this.handleSubmit}>
+            <label htmlFor="username">Username: </label>
+            <input
+              type='text'
+              name='username'
+              value={this.state.username}
+              onChange={this.handleChange}
+              id='username'
+            />
+            <label htmlFor="password">Password: </label>
+            <input
+              type='password'
+              name='password'
+              value={this.state.password}
+              onChange={this.handleChange}
+              id='password'
+            />
+            {this.state.message && (
+              <p>{this.state.message}</p>
+            )}
+            <button className="submit-button" type='submit'>Signup</button>
+          </form>
+        </div>
       </>
     )
   }
