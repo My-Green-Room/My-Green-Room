@@ -92,7 +92,7 @@ class EditPlant extends Component {
           />
 
           <button type="submit">Edit</button>
-          <button type="submit">Close Edit Form</button>
+          <button type="button" onClick= {this.props.closeEditForm}>Close Edit Form</button>
         </form>
       </div>
     );
