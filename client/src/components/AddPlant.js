@@ -41,7 +41,7 @@ class AddPlant extends Component {
           Add your plant!
         </button>
 
-        <button onClick={this.props.closeAddForm}>Close Add Form</button>
+        <button onClick={this.props.closeAddForm}>X</button>
       </div>
     );
   }
