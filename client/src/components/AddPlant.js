@@ -2,16 +2,16 @@ import React, { Component } from "react";
 import "./style.css";
 import nursery from "../assets/nursery.json";
 import "./style.css"
+import { authorize } from "passport";
 
 class AddPlant extends Component {
   render() {
     return (
       <div className="interaction">
-        <h1> Add Your Plant!</h1>
 
         <img
           src={this.props.plantCat.imgPath[0]}
-          style={{ height: "40vh" }}
+          style={{ height: "auto", width: "60%"}}
         ></img>
 
         <div>
@@ -24,7 +24,7 @@ class AddPlant extends Component {
           <span>{this.props.plantCat.description}</span>
         </div>
 
-        <div className="iconwater">
+        <div className="iconwater icones">
           <strong><img src="https://img.icons8.com/plasticine/100/000000/plant-under-rain.png" />: </strong>
           <span>{this.props.plantCat.water}</span>
         </div>

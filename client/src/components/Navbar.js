@@ -13,22 +13,23 @@ const handleLogout = props => {
 export default function Navbar(props) {
   return (
     <nav className="nav-container">
-      <ul>
+      
         {props.user ? (
           <>
-            <li>Welcome to your Green Room {props.user.username}! </li>
+          <ul className="room-nav">
+            <li className="welcome-message">Welcome to your Green Room {props.user.username}! </li>
             <li className="nav-button" > <Link to='/' onClick={() => handleLogout(props)}>Logout</Link> </li>
+          </ul>
           </>
         ) : (
             <>
-
+            <ul className="homepage-nav">
               <li className="nav-button" > <Link to='/signup'>Signup</Link> </li>
               <li className="nav-button"> <Link to='/login'>Login</Link></li>
-
+            </ul>
             </>
           )}
 
-      </ul>
     </nav>
   )
 }

@@ -6,9 +6,11 @@ class Home extends Component {
     return (
       <div>
         <div className="home-container">
-          <h1 className="my-green-room">MY <br />GREEN <br />ROOM</h1>
+          <div className="logo-circle">
+              <h1 className="my-green-room">MY <br />GREEN <br />ROOM</h1>
+          </div>
           <img />
-          <div className="home-text">Please come in and grow your own garden. Learn more about the needs of your real plants - or visit your green room as often as you like! </div>
+          <div className="home-text">Come in and create your very own virtual home garden! ...and learn how to care for your real plants along the way!</div>
           <img />
         </div>
       </div>
