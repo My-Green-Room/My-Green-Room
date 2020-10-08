@@ -27,6 +27,7 @@ class EditPlant extends Component {
       })
       .then((response) => {
         console.log(response);
+        this.props.closeEditForm()
         // this.props.getTheProject();
         // after submitting the form, redirect to '/projects'
         // this.props.history.push("/room");
@@ -94,7 +95,7 @@ class EditPlant extends Component {
             onChange={this.handleChange}
           />
 
-          <button className="submit-button" id="editbtn" type="submit">My plant is ready!</button>
+          <button className="submit-button" id="editbtn" type="submit" >My plant is ready!</button>
           
         </form>
       </div>
