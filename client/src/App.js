@@ -22,8 +22,10 @@ class App extends Component {
   };
 
   render() {
+    //comment
     return (
       <div>
+      
         <Navbar user={this.state.user} setUser={this.setUser} />
 
         <Route
