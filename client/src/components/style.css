@@ -161,9 +161,6 @@ margin-top: 2em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
 }
 
 .button-container {
@@ -286,8 +283,8 @@ background-color: #F27D72;
 
 
 .plant {
-width: 20vh;
-height: 20vh
+width: 60vh;
+height: 60vh
 }
 
 .icones img {
@@ -299,3 +296,4 @@ height: 5vh;
   width: 7vh;
   height: 7vh;
   }
+
