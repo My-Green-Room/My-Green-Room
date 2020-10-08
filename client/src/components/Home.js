@@ -5,10 +5,12 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <div class="home-container">
-          <h1 className="my-green-room">MY <br />GREEN <br />ROOM</h1>
+        <div className="home-container">
+          <div className="logo-circle">
+              <h1 className="my-green-room">MY <br />GREEN <br />ROOM</h1>
+          </div>
           <img />
-          <p class="gmnd">Please come in and grow your own garden. Learn more about the needs of your real plants - or visit your green room as often as you like! </p>
+          <div className="home-text">Come in and create your very own virtual home garden! ...and learn how to care for your real plants along the way!</div>
           <img />
         </div>
       </div>

@@ -1,85 +1,187 @@
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Josefin+Slab&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Roboto+Condensed&display=swap');
 
-.gmnd {
-  font-family: "EB Garamond";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 7vmin;
-  line-height: 1.1;
-  letter-spacing: -0.2rem;
-  margin-left: 3vmin;
-  margin-right: 3vmin;
+body {
+  height: 100%;
+  background-color: #fffff5;
+  margin:3em;
+  color:#12330e;
+  font-family: 'Amatic SC', cursive;
+}
+
+
+.home-text { 
+	font-style: normal;
+	font-weight: 400;
+    font-size: 7vmin;
+    line-height: 1.1;
+    letter-spacing: -0.2rem;
+    margin: 0 6vmin;
+    width: calc(100% - 350px);
+    letter-spacing: 0.05vmin;
 }
 
 h1 {
-  font-family: "Open Sans", sans-serif;
-  font-size: 3vmin;
+  font-size: 2.5em;
+  color:#12330e;
+}
+
+h2 {
+  font-size:2em;
+  color:#12330e;
 }
 
 p {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-size: 19px;
+  margin-left: 3em;
+}
+
+.labels {
   font-size: 19px;
   margin-left: 3em;
 }
 
 .nav-container {
-  font-family: "Open Sans", sans-serif;
-  font-size: 3vmin;
+  font-size: 1.2em;
   font-weight: lighter;
-  display: flex;
-  flex-direction: row-reverse;
   border: black;
+  margin:2em 0;
 }
 
-.my-green-room {
-  font-family: "EB Garamond";
-  color: #8cff98;
-  font-weight: lighter;
-  font-size: 11vmin;
-  text-align: left;
-  margin-left: 3vmin;
+.nav-container ul {
+  padding:0;
+}
+
+#login .submit-button, #signup .submit-button {
+  width:auto;
+  margin:0 1em 0 3em ;
+  padding:10px 60px;
+  clear:both;
+}
+input {
+  background-color: #fff;
+   border:none;
+   border-radius: 1em;
+   padding: 5px 5px 5px 5px;
+   font-weight: bold;
+   margin-top:0.8em;
+   margin-bottom:0.8em ;
+ }
+
+ #editNickname {
+  margin-bottom:0.5em ;
+ }
+
+ #editbtn {
+margin-top: 2em;
+ }
+
+.homepage-nav {
+  display: flex;
+  flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: flex-start;
+	align-content: center;
+}
+
+.room-nav {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	align-content: center;
 }
 
 .home-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  margin-left: 2em;
+  display: -webkit-box;
+  margin: 0 2em;
 }
 
 .room-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: 2em;
 }
 
-.plant-container {
+#watering {
+  background-color: #c3f2ff;
+  border:none;
+  border-radius: 50%;
+}
+
+.interaction {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color:#ffdeca;
+  padding:2em;
+  border-radius: 1.5em;
+}
+
+.interaction div {
+  margin:0.7em 0;
+}
+
+.interaction h1 {
+  font-family: 'Amatic SC', cursive;
+  font-size:2em;
+  width:80%;
+}
+
+.logo-circle {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-color: #91de99;
+}
+
+.my-green-room {
+  color: #fffff5;
+  font-size: 13vmin;
+  margin-left: 3vmin;
+  line-height: 0.8em;
+  text-transform: lowercase;
+  text-align: center;
+  margin: 0.5em;
+}
+
+.interaction {
   display: flex;
+  flex-direction: column;
+}
+
+.welcome-message {
+  list-style: none;
+  font-size:3em;
+  font-weight: bold;
+}
+
+.living-room {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .button-container {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 
 .plant-button {
-  font-family: "Open Sans", sans-serif;
-  font-weight: lighter;
-  color: black;
-  background-color: #44c767;
-  font-size: 4vmin;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #12330e;
+  background-color: #91de99;
+  font-size: 1em;
+  font-weight: bold;
   margin-right: 2em;
-  margin-top: 1em;
-  border-style: solid;
-  padding: 5px 10px;
-  border-width: 2px;
-  border-radius: 25px;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 2em;
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #2f6627;
 }
 
 .plant-button:hover {
@@ -90,30 +192,95 @@ p {
   top: 1px;
 }
 
+
+
+.interaction .icones {
+  font-family: 'Amatic SC', cursive;
+  font-size:1.5em;
+  font-weight: normal;
+}
+
 .nav-button {
-  font-family: "Open Sans", sans-serif;
-  font-weight: lighter;
+  font-family: 'Roboto Condensed', sans-serif;
   color: black;
-  font-size: 4vmin;
+  font-size: 1em;
   margin-right: 2em;
-  margin-top: 1em;
   border-style: solid;
-  padding: 5px 10px;
-  border-width: 2px;
+  padding: 15px 25px;
+  border: none;
   border-radius: 25px;
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #2f6627;
+  background-color:#ffd89e;
+}
+
+a:visited {
+  color:#000;
+}
+
+.nav-button a {
+    text-decoration: none;
 }
 
 .nav-button:hover {
-  background-color: cornflowerblue;
+  background-color: #91de99;
+  color:#fffff5;
 }
 .nav-button:active {
   position: relative;
   top: 1px;
 }
+
+.submit-button {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: #91de99;
+  font-size: 1.2em;
+  margin: 1em 0 0 0;
+  border-style: solid;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 2em;
+  display:inline-block;
+	cursor: pointer;
+  text-decoration: none;
+  width:100%;
+}
+
+.close {
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  display: flex;
+  align-self: flex-end;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+
+.submit-button:hover {
+background-color: #F27D72;
+}
+.submit-button:active {
+	position:relative;
+	top:1px;
+}
+
 
 .plant {
 width: 60vh;
