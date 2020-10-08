@@ -107,7 +107,7 @@ margin-top: 2em;
   grid-template-columns: 1fr 2fr;
   margin-top: 2em;
   border-radius: 1.5em;
-  background-image: url(../assets/background.PNG);
+  background-image: url(../assets/background_color.PNG);
   background-position: center;
   background-size: cover;
 }
