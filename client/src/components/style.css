@@ -106,12 +106,18 @@ margin-top: 2em;
   display: grid;
   grid-template-columns: 1fr 2fr;
   margin-top: 2em;
+  border-radius: 1.5em;
+  background-image: url(../assets/background.PNG);
+  background-position: center;
+  background-size: cover;
 }
 
 #watering {
   background-color: #c3f2ff;
   border:none;
   border-radius: 50%;
+  padding: 5px 20px;
+
 }
 
 .interaction {
@@ -163,6 +169,9 @@ margin-top: 2em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  align-self: center
 }
 
 .button-container {
@@ -285,14 +294,16 @@ background-color: #F27D72;
 
 
 .plant {
-width: 60vh;
-height: 60vh
+width: 20%;
+height: 20%;
 }
+
 
 .icones img {
 width: 5vh;
 height: 5vh;
 }
+
 
 .iconwater img  {
   width: 7vh;
