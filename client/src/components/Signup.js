@@ -42,9 +42,9 @@ export default class Signup extends Component {
     return (
       <>
         <div className="interaction">
-          <h2>Signup</h2>
-          <form onSubmit={this.handleSubmit}>
-            <label htmlFor="username">Username: </label>
+          <h2 className="labels">Sign up</h2>
+          <form id="signup" onSubmit={this.handleSubmit}>
+            <label className="labels"  htmlFor="username">Username: </label>
             <input
               type='text'
               name='username'
@@ -52,7 +52,7 @@ export default class Signup extends Component {
               onChange={this.handleChange}
               id='username'
             />
-            <label htmlFor="password">Password: </label>
+            <label className="labels"  htmlFor="password">Password: </label>
             <input
               type='password'
               name='password'
@@ -63,7 +63,7 @@ export default class Signup extends Component {
             {this.state.message && (
               <p>{this.state.message}</p>
             )}
-            <button className="submit-button" type='submit'>Signup</button>
+            <button className="submit-button" type='submit'>Sign up!</button>
           </form>
         </div>
       </>

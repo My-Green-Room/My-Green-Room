@@ -56,10 +56,13 @@ class EditPlant extends Component {
     console.log(this.state, this.props.plant);
     return (
       <div className="interaction">
-        <h2>Customise your Plant!</h2>
+
+<button className="close" onClick={this.props.closeEditForm}></button>
+
+        <h1>Customise your Plant!</h1>
 
         <form onSubmit={this.handleSubmit} className="interaction">
-          <label>Nickname: </label>
+          <label id="editNickname">Nickname: </label>
           <input
             type="text"
             name="nickname"
@@ -67,7 +70,7 @@ class EditPlant extends Component {
             onChange={this.handleChange}
           />
 
-          <label>Water: </label>
+          <label className="icones" ><strong><img src="https://img.icons8.com/plasticine/100/000000/plant-under-rain.png" /></strong></label>
           <input
             type="text"
             name="water"
@@ -75,7 +78,7 @@ class EditPlant extends Component {
             onChange={this.handleChange}
           />
 
-          <label>Sun: </label>
+          <label className="icones"> <strong><img src="https://img.icons8.com/doodle/48/000000/sun--v1.png" />  </strong> </label>
           <input
             type="text"
             name="sun"
@@ -83,7 +86,7 @@ class EditPlant extends Component {
             onChange={this.handleChange}
           />
 
-          <label>Soil: </label>
+          <label className="icones"> <strong><img src="https://img.icons8.com/doodle/48/000000/hand-planting.png" /> </strong></label>
           <input
             type="text"
             name="soil"
@@ -91,8 +94,8 @@ class EditPlant extends Component {
             onChange={this.handleChange}
           />
 
-          <button className="submit-button" type="submit">That's My Plant!</button>
-          <button className="submit-button" type="submit" onClick={this.props.closeEditForm}>X</button>
+          <button className="submit-button" id="editbtn" type="submit">My plant is ready!</button>
+          
         </form>
       </div>
     );

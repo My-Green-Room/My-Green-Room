@@ -65,7 +65,7 @@ export default class Login extends Component {
             {this.state.message && (
               <p>{this.state.message}</p>
             )}
-            <button className="submit-button" type='submit'>Login</button>
+            <button className="submit-button" type='submit'>Log in!</button>
           </form>
         </div>
       </>
