@@ -51,6 +51,7 @@ class Room extends Component {
         this.setState({
           plants: filteredPlants,
         });
+        this.closePlantDetailsForm()
         this.props.history.push("/room");
       })
       .catch((error) => {
@@ -149,7 +150,8 @@ class Room extends Component {
     console.log(this.state.plants);
     console.log(this.state.selectedPlantCatDefault);
     return (
-      <div>
+      <div className="room">
+        <h2>Choose a plant to add to your garden:</h2>
         <div className="button-container">
           <button className="plant-button" id="cacti" onClick={this.handleAddForm}>
             Cactus
