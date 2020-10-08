@@ -71,6 +71,9 @@ p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
 }
 
 .button-container {
@@ -158,8 +161,8 @@ background-color: #F27D72;
 
 
 .plant {
-width: 60vh;
-height: 60vh
+width: 20vh;
+height: 20vh
 }
 
 .icones img {
