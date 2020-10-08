@@ -51,6 +51,7 @@ class Room extends Component {
         this.setState({
           plants: filteredPlants,
         });
+        this.closePlantDetailsForm()
         this.props.history.push("/room");
       })
       .catch((error) => {
